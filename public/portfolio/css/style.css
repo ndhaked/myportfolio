@@ -2065,7 +2065,7 @@ input:not([type=submit]):not([type=file]):focus, select:focus, textarea:focus {
 
 
 h2 {
-  margin-bottom: 110px;
+  margin-bottom: 35px;
 }
 .education .item .content.mca {
   top: -217px;
