@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
     	<meta charset="utf-8">
+    	<meta name="csrf-token" content="{{ csrf_token() }}">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="keywords" content="Laravel Expert In Jaipur,Laravel Expert,Senior Laravel Developer, Technology Lead, Backend Architect, PHP Expert, REST API, SaaS Development, Mobiiworld Developer, Jaipur PHP Developer, System Architecture, Database Optimization" />
@@ -24,6 +25,7 @@
           var App_ENV = "{{config('app.env')}}";
           var _authUserId_ = "{{optional(auth()->user())->id}}";
        </script>
+    		<link rel="stylesheet" type="text/css" href="portfolio/css/cubeportfolio.min.css">
         <script>
       (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -38,10 +40,7 @@
       })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
       ga('create', 'UA-73740395-1', 'auto');
       ga('send', 'pageview');
-    </script>
-    <link rel="stylesheet" type="text/css" href="portfolio/css/cubeportfolio.min.css">
-    <script type="text/javascript">
-
+   
 document.onkeydown = function (e) {
 	e = e || window.event;
 	if (e.ctrlKey) {
@@ -206,7 +205,7 @@ all_shortcuts: {},
 	        <!-- add google tags here -->
 	      @endif
           @yield('content')
-              <script src="portfolio/js/jquery-1.11.2.min.js"></script>
+        <script src="portfolio/js/jquery-1.11.2.min.js"></script>
 			  <script src="portfolio/js/bootstrap.min.js"></script>
 			  <script src="portfolio/js/jquery.inview.min.js"></script>
 			  <script src="portfolio/js/smoothscroll.js"></script>

@@ -271,7 +271,7 @@
 	}
 	
 	/*==========  Contact Form  ==========*/
-	$('.contact-form').on('submit', function() {
+	/*$('.contact-form').on('submit', function() {
 		var contactForm = $(this);
 		contactForm.find('.contact-error').fadeOut();
 		contactForm.find('.contact-success').fadeOut();
@@ -312,8 +312,82 @@
 			contactForm.find('.contact-error').fadeIn();
 		}
 		return false;
-	});
+	});*/
 
+  // Helper function for email validation
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+    $('.contact-form').on('submit', function(e) {
+        e.preventDefault(); // Stop normal form submission
+
+        var contactForm = $(this);
+        var submitBtn = contactForm.find('button[type="submit"]');
+        
+        // Reset alerts
+        contactForm.find('.contact-error').fadeOut();
+        contactForm.find('.contact-success').fadeOut();
+        contactForm.find('.contact-loading').fadeIn();
+        submitBtn.prop('disabled', true); // Prevent double click
+
+        // Client-side Validation
+        if (validateEmail(contactForm.find('.contact-email').val()) && 
+            contactForm.find('.contact-name').val().length !== 0 && 
+            contactForm.find('.contact-message').val().length !== 0) {
+            
+            var action = contactForm.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: action,
+                // Setup CSRF Token for Laravel
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    contact_name: contactForm.find('.contact-name').val(),
+                    contact_email: contactForm.find('.contact-email').val(),
+                    contact_message: contactForm.find('.contact-message').val(),
+                    contact_phone: contactForm.find('.contact-phone').val(),
+                },
+                success: function(response) {
+                    contactForm.find('.contact-loading').fadeOut();
+                    contactForm.find('.contact-success').find('.message').html(response.message);
+                    contactForm.find('.contact-success').fadeIn();
+                    
+                    // Clear inputs on success
+                    contactForm.find('input, textarea').val('');
+                    submitBtn.prop('disabled', false);
+                },
+                error: function(xhr) {
+                    contactForm.find('.contact-loading').fadeOut();
+                    var errorMsg = 'Sorry, an error occurred.';
+                    
+                    // If Laravel returns validation errors
+                    if(xhr.status === 422) {
+                        errorMsg = 'Please check your inputs.';
+                    }
+                    
+                    contactForm.find('.contact-error').find('.message').html(errorMsg);
+                    contactForm.find('.contact-error').fadeIn();
+                    submitBtn.prop('disabled', false);
+                }
+            });
+
+        } else {
+            // Validation Failed
+            contactForm.find('.contact-loading').fadeOut();
+            var msg = 'Please fill out all fields correctly.';
+            if (!validateEmail(contactForm.find('.contact-email').val())) {
+                msg = 'Please enter a valid email.';
+            }
+            contactForm.find('.contact-error').find('.message').html(msg);
+            contactForm.find('.contact-error').fadeIn();
+            submitBtn.prop('disabled', false);
+        }
+    });
 	/*==========  Map  ==========*/
 	var map;
 	function initialize_map() {

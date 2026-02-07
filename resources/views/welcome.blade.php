@@ -64,66 +64,67 @@
     <div class="slide-out-widgets">
       <div class="slide-out-widget">
         <h4>Drink A Coffee With Me Today</h4>
-        <form action="" method="post" class="form-horizontal contact-form">
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Name</label>
-            <div class="col-sm-9">
-              <input type="text" class="contact-name" name="contact-name" />
+        <form action="{{ route('contactusSubmit') }}" method="post" class="form-horizontal contact-form">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="contact-name" name="contact-name" />
+                </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Email</label>
-            <div class="col-sm-9">
-              <input type="email" class="contact-email" name="contact-email" />
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="email" class="contact-email" name="contact-email" />
+                </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">Message</label>
-            <div class="col-sm-9">
-              <textarea name="contact-message" class="contact-message" rows="3"></textarea>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Phone</label>
+                <div class="col-sm-9">
+                    <input type="text" class="contact-phone" name="contact_phone" />
+                </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-9 col-sm-offset-3">
-              <button type="submit" class="button solid-button purple">Send Message</button>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Message</label>
+                <div class="col-sm-9">
+                    <textarea name="contact-message" class="contact-message" rows="3"></textarea>
+                </div>
             </div>
-          </div>
-          <div class="contact-loading alert alert-info form-alert">
-            <span class="message">Loading...</span>
-            <button type="button" class="close" data-hide="alert" aria-label="Close">
-              <i class="fa fa-times"></i>
-            </button>
-          </div>
-          <div class="contact-success alert alert-success form-alert">
-            <span class="message">Success!</span>
-            <button type="button" class="close" data-hide="alert" aria-label="Close">
-              <i class="fa fa-times"></i>
-            </button>
-          </div>
-          <div class="contact-error alert alert-danger form-alert">
-            <span class="message">Error!</span>
-            <button type="button" class="close" data-hide="alert" aria-label="Close">
-              <i class="fa fa-times"></i>
-            </button>
-          </div>
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <button type="submit" class="button solid-button purple">Send Message</button>
+                </div>
+            </div>
+            
+            <div class="contact-loading alert alert-info form-alert" style="display:none;">
+                <span class="message">Sending Request...</span>
+                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
+            </div>
+            <div class="contact-success alert alert-success form-alert" style="display:none;">
+                <span class="message">Success!</span>
+                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
+            </div>
+            <div class="contact-error alert alert-danger form-alert" style="display:none;">
+                <span class="message">Error!</span>
+                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
+            </div>
         </form>
       </div>
       <div class="slide-out-widget">
         <h4>Connect on Social Network</h4>
         <div class="instagram">
-          <a class="social-icon" href="https://www.facebook.com/htmlriyo" target="_blank">
+          <a class="social-icon" href="https://www.facebook.com/dnirbhay" target="_blank">
             <i class="fa fa-facebook"></i>
           </a>
-          <a class="social-icon" href="https://twitter.com/designer_riyo" target="_blank">
+          <a class="social-icon" href="https://twitter.com/ndhaked" target="_blank">
             <i class="fa fa-twitter"></i>
           </a>
           <a class="social-icon" href="https://plus.google.com/u/0/115712836675253430474" target="_blank">
             <i class="fa fa-google-plus"></i>
           </a>
-          <a href="https://www.linkedin.com/in/designerriyo" class="social-icon" target="_blank">
+          <a href="https://www.linkedin.com/in/ndhaked" class="social-icon" target="_blank">
             <i class="fa fa-linkedin" target="_blank"></i>
           </a>
-          <a class="social-icon" href="skype:riyo.khan">
+          <a class="social-icon" href="skype:live:718c6b5c940cd730">
             <i class="fa fa-skype"></i>
           </a>
         </div>
@@ -151,19 +152,19 @@
         <nav class="social-nav">
           <ul class="list-unstyled">
             <li>
-              <a href="https://www.facebook.com/htmlriyo" target="_blank">Facebook</a>
+              <a href="https://www.facebook.com/dnirbhay" target="_blank">Facebook</a>
             </li>
             <li>
-              <a href="https://twitter.com/designer_riyo" target="_blank">Twitter</a>
+              <a href="https://twitter.com/ndhaked" target="_blank">Twitter</a>
             </li>
             <li>
               <a href="https://plus.google.com/u/0/115712836675253430474" target="_blank">Google+</a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/designerriyo" target="_blank">Linkedin</a>
+              <a href="https://www.linkedin.com/in/ndhaked" target="_blank">Linkedin</a>
             </li>
             <li>
-              <a href="skype:riyo.khan">Skype</a>
+              <a href="skype:live:718c6b5c940cd730">Skype</a>
             </li>
           </ul>
         </nav>
@@ -710,7 +711,7 @@
             </div>
             <div class="col-sm-7">
               <h5>Contact Form</h5>
-              <form action="" method="post" class="form-horizontal contact-form">
+              <form action="{{ route('contactusSubmit') }}" method="post" class="form-horizontal contact-form">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Name</label>
                   <div class="col-sm-10">
@@ -724,6 +725,12 @@
                   </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-sm-2 control-label">Phone</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="contact-phone" name="contact_phone" />
+                    </div>
+                </div>
+                <div class="form-group">
                   <label class="col-sm-2 control-label">Message</label>
                   <div class="col-sm-10">
                     <textarea name="contact-message" class="contact-message" rows="3"></textarea>
@@ -735,7 +742,7 @@
                   </div>
                 </div>
                 <div class="contact-loading alert alert-info form-alert">
-                  <span class="message">Loading...</span>
+                  <span class="message">Sending Request...</span>
                   <button type="button" class="close" data-hide="alert" aria-label="Close">
                     <i class="fa fa-times"></i>
                   </button>

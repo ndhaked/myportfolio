@@ -8,6 +8,7 @@ use App\Http\Controllers\DealsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PageManagementController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
@@ -47,7 +48,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 
 Route::post('newsletter-subscription', [FrontController::class, 'newsletterSubscription'])->name('newsletter.subscription');
-Route::post('contactus-submit', action: [FrontController::class, 'contactSubmit'])->name('contactusSubmit');
+Route::post('/contact-submit', [ContactController::class, 'store'])->name('contactusSubmit');
 
 //use for development purpose only
 Route::get('/run-manual-migrations', function () {
