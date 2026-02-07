@@ -171,7 +171,7 @@
     </div>
     <div class="bottom clearfix">
       <div class="title">
-        <a href="index.html">Nirbhay Dhaked</a>
+        <a href="{{URL::to('/')}}">Nirbhay Dhaked</a>
       </div>
       <div class="header-action-button-wrapper">
         <a href="#" class="header-action-button action-button">

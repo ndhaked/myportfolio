@@ -41,7 +41,7 @@
     </script>
     <link rel="stylesheet" type="text/css" href="portfolio/css/cubeportfolio.min.css">
     <script type="text/javascript">
-      /*
+
 document.onkeydown = function (e) {
 	e = e || window.event;
 	if (e.ctrlKey) {
@@ -198,7 +198,7 @@ all_shortcuts: {},
 }),
 	shortcut.add("Ctrl+C",function(){
 
-}) */
+})
     </SCRIPT>
     </head>
     <body onLoad="disableClick()">
