@@ -201,7 +201,7 @@ all_shortcuts: {},
 })
     </SCRIPT>
     </head>
-    <body onLoad="disableClick()">
+    <body>
 	      @if(env('APP_ENV') === 'production')
 	        <!-- add google tags here -->
 	      @endif
