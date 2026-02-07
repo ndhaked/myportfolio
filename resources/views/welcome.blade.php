@@ -54,7 +54,7 @@
         <span>Senior Technology Lead</span>
       </div>
       <div class="text-right">
-        <a href="Nirbhay Singh SR. Laravel Developer.pdf" download class="button link-button white icon-left">
+        <a href="public/Nirbhay Singh SR. Laravel Developer.pdf" download class="button link-button white icon-left">
           <i class="md md-file-download"></i>Download Resume </a>
         <br>
         <a href="download-area/riyaz.zip" class="button link-button white icon-left" style="display:none;">
@@ -141,7 +141,7 @@
         <a href="#" class="open-search header-open-search">
           <i class="md md-search" style="display:none;"></i>
         </a>
-        <a href="Nirbhay Singh SR. Laravel Developer.pdf" download class="download">
+        <a href="public/Nirbhay Singh SR. Laravel Developer.pdf" download class="download">
           <i class="md md-file-download"></i>
         </a>
         <a href="#" class="share">
@@ -223,7 +223,7 @@
               </h1>
               <p>I am a dedicated <strong>Senior Technology Lead & Laravel Expert</strong> with 12+ years of extensive experience. I don't just write code; I engineer robust, scalable web applications that drive business growth. From complex API ecosystems to high-traffic database architectures, my expertise lies in transforming raw requirements into efficient, secure, and maintainable software. Proficient in Agile methodologies and MySQL optimization, I help innovative companies build the future of their IT infrastructure. </p>
               <p class="button-row">
-                <a href="Nirbhay Singh SR. Laravel Developer.pdf" download class="button solid-button purple">Download CV</a>
+                <a href="public/Nirbhay Singh SR. Laravel Developer.pdf" download class="button solid-button purple">Download CV</a>
                 <a href="download-area/riyaz.zip" class="button solid-button white" style="display:none;">Download Android App</a>
               </p>
             </div>
