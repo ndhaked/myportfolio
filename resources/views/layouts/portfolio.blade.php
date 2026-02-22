@@ -59,7 +59,8 @@
 	    <link href="portfolio/css/owl.carousel.css" rel="stylesheet">
 	    <link href="portfolio/css/owl.theme.default.css" rel="stylesheet">
 	    <link href="portfolio/css/style.css" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        <link rel="icon" type="image/svg+xml" href="{{ asset('public/favicon.svg') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
         <script>
             const RECAPTCHA_SITE_KEY = "{{ config('services.recaptcha.site_key') }}";
         </script>

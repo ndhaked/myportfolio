@@ -9,7 +9,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('title', config('app.name', 'ADAI - Log in to your account'))</title>
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        <link rel="icon" type="image/svg+xml" href="{{ asset('public/favicon.svg') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
         <!-- <link rel="preconnect" href="https://fonts.bunny.net"> -->
         <!-- <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
