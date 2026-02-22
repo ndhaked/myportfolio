@@ -18,7 +18,7 @@ class RegisterInterestConfirmation extends Mailable
     public function build(): self
     {
         $fullPhone = trim(($this->user->country_code ?? '') . ' ' . ($this->user->phone_number ?? ''));
-        $supportEmail = config('services.support_email', 'info@adai.art');
+        $supportEmail = config('services.support_email', 'info@laravelexpert.in');
 
         return $this->subject('Thank you for your interest in ADAI')
             ->replyTo($supportEmail, 'ADAI Support')

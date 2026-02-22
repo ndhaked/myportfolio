@@ -15,7 +15,7 @@ return [
     */
 
     'default' => env('MAIL_MAILER', 'log'),
-    'recipient_email' => env('RECIPIENT_EMAIL', 'info@adai.art'),
+    'recipient_email' => env('RECIPIENT_EMAIL', 'info@laravelexpert.in'),
 
 
     /*
@@ -37,7 +37,7 @@ return [
     |
     */
 
-    'recipient_email' => env('RECIPIENT_EMAIL', 'info@adai.art'),
+    'recipient_email' => env('RECIPIENT_EMAIL', 'info@laravelexpert.in'),
 
     'mailers' => [
 

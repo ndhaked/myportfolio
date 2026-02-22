@@ -101,12 +101,12 @@
  
 
                             <p style="margin:0 0 24px;font-size:18px;color:#555555; font-weight: 400;">
-                               If you have any questions or need further assistance, please feel free to contact the ADAI Support Team at info@adai.art. 
+                               If you have any questions or need further assistance, please feel free to contact the CRM Support Team at info@laravelexpert.in. 
 
 
                             </p>
                              <p style="margin:0 0 24px;font-size:18px;color:#555555; font-weight: 400;">
-                                Kind regards, The ADAI Team
+                                Kind regards, The CRM Team
 </p>
 </td>
 </tr>
@@ -121,7 +121,7 @@
 
                             <p style="margin:12px 0 0; font-size:11px; color:#9D9D9C;
 font-weight: 600;">
-                                © <?php echo date('Y')?> ADAI. All rights reserved.
+                                © <?php echo date('Y')?> CRM. All rights reserved.
                             </p>
                         </td>
                     </tr>

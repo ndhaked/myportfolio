@@ -31,10 +31,10 @@
                             </p>
                             <p style="margin:0 0 24px;font-size:18px;color:#555555; font-weight: 400;">
                                 If you did not request this change, please reset your password immediately or contact
-                                the ADAI Support Team at info@adai.art.
+                                the CRM Support Team at info@laravelexpert.in.
                             </p>
                             <p style="margin:0 0 24px;font-size:18px;color:#555555; font-weight: 400;">
-                                Kind regards, The ADAI Team
+                                Kind regards, The CRM Team
                             </p>
                         </td>
                     </tr>
@@ -46,7 +46,7 @@
                     <tr>
                         <td style="padding:16px 32px 24px; text-align:center;">
                             <p style="margin:12px 0 0; font-size:11px; color:#9D9D9C; font-weight: 600;">
-                                © 2025 ADAI. All rights reserved.
+                                © 2025 CRM. All rights reserved.
                             </p>
                         </td>
                     </tr>

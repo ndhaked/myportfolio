@@ -16,7 +16,7 @@
         </div>
         <p
           class="login-subtitle">
-          To reset your password, please enter your email address you may have used with ADAI. We will send you a
+          To reset your password, please enter your email address you may have used with CRM. We will send you a
           verification code.
         </p>
       </div>
