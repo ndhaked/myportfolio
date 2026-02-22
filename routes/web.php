@@ -9,6 +9,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PageManagementController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SeoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
@@ -18,6 +19,13 @@ Route::get('/health', function () {
 Route::get('/', function () {
     return view('welcome');
 });
+
+// SEO Pages
+Route::get('/laravel-expert-in-jaipur', [SeoController::class, 'laravelExpertJaipur'])->name('seo.laravel-expert-jaipur');
+Route::get('/hire-laravel-developer-in-jaipur', [SeoController::class, 'hireLaravelDeveloperJaipur'])->name('seo.hire-laravel-developer-jaipur');
+Route::get('/senior-laravel-developer-india', [SeoController::class, 'seniorLaravelDeveloperIndia'])->name('seo.senior-laravel-developer-india');
+Route::get('/laravel-api-development', [SeoController::class, 'laravelApiDevelopment'])->name('seo.laravel-api-development');
+Route::get('/sitemap.xml', [SeoController::class, 'sitemap'])->name('sitemap');
 
 Route::middleware('auth')->group(function () {
     Route::resource('projects', ProjectsController::class);

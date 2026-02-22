@@ -5,9 +5,53 @@
     	<meta name="csrf-token" content="{{ csrf_token() }}">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="keywords" content="Laravel Expert In Jaipur,Laravel Expert,Senior Laravel Developer, Technology Lead, Backend Architect, PHP Expert, REST API, SaaS Development, Mobiiworld Developer, Jaipur PHP Developer, System Architecture, Database Optimization" />
-	    <meta name="Description" content="Senior Technology Lead & Laravel Expert with 12+ years of experience engineering scalable web solutions and leading backend teams." />
-	    <title>@yield('title', 'Nirbhay Dhaked | Laravel Expert | Senior Laravel Architect & Technology Lead')</title>
+	    <meta name="description" content="@yield('meta_description', 'Looking for a Laravel Expert in Jaipur? Nirbhay Singh is a Senior Laravel Developer with 12+ years of experience building scalable SaaS, REST APIs and enterprise web applications.')" />
+	    <meta name="keywords" content="@yield('meta_keywords', 'Laravel Expert, Laravel Developer, Jaipur, PHP Developer, Senior Developer, REST API, SaaS, Web Application, Nirbhay Dhaked')" />
+	    <meta name="author" content="Nirbhay Dhaked" />
+	    <meta name="robots" content="index, follow" />
+	    <title>@yield('title', 'Laravel Expert in Jaipur | Nirbhay Singh – Senior Laravel Developer')</title>
+
+	    <!-- Canonical -->
+			<link rel="canonical" href="@yield('canonical', 'https://laravelexpert.in/')" />
+
+			<!-- Open Graph (Facebook, LinkedIn) -->
+			<meta property="og:title" content="@yield('title', 'Laravel Expert in Jaipur | Nirbhay Singh')" />
+			<meta property="og:description" content="@yield('meta_description', 'Senior Laravel Developer with 12+ years experience in SaaS, API development and backend architecture.')" />
+			<meta property="og:url" content="@yield('canonical', 'https://laravelexpert.in/')" />
+			<meta property="og:type" content="website" />
+			<meta property="og:site_name" content="Nirbhay Dhaked – Laravel Expert" />
+			<meta property="og:locale" content="en_US" />
+
+			<!-- Twitter Card -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:title" content="@yield('title', 'Laravel Expert in Jaipur | Nirbhay Singh')" />
+			<meta name="twitter:description" content="@yield('meta_description', 'Senior Laravel Developer with 12+ years experience.')" />
+
+			<!-- JSON-LD Structured Data -->
+			@hasSection('structured_data')
+				@yield('structured_data')
+			@else
+			<script type="application/ld+json">
+			{
+			  "@@context": "https://schema.org",
+			  "@@type": "ProfessionalService",
+			  "name": "Laravel Expert in Jaipur",
+			  "url": "https://laravelexpert.in",
+			  "description": "Senior Laravel Developer with 12+ years experience in SaaS, APIs and scalable web applications.",
+			  "address": {
+			    "@@type": "PostalAddress",
+			    "addressLocality": "Jaipur",
+			    "addressCountry": "IN"
+			  },
+			  "founder": {
+			    "@@type": "Person",
+			    "name": "Nirbhay Dhaked"
+			  },
+			  "areaServed": "Jaipur"
+			}
+			</script>
+			@endif
+
 	    <link href="portfolio/css/bootstrap.min.css" rel="stylesheet">
 	    <link href="portfolio/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
 	    <link href="portfolio/css/font-awesome.min.css" rel="stylesheet">
@@ -41,18 +85,18 @@
       ga('create', 'UA-73740395-1', 'auto');
       ga('send', 'pageview');
    
-document.onkeydown = function (e) {
-	e = e || window.event;
-	if (e.ctrlKey) {
-		var c = e.which || e.keyCode;
-		switch (c) {
-			case 83:
-				e.preventDefault();     
-				e.stopPropagation();
-			break;
-		}
-	}
-};
+		document.onkeydown = function (e) {
+			e = e || window.event;
+			if (e.ctrlKey) {
+				var c = e.which || e.keyCode;
+				switch (c) {
+					case 83:
+						e.preventDefault();     
+						e.stopPropagation();
+					break;
+				}
+			}
+		};
 
 	function ieClicked() {
 		if (document.all) {
