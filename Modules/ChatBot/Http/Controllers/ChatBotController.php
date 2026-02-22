@@ -1,0 +1,132 @@
+<?php
+
+namespace Modules\ChatBot\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class ChatBotController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        return view('chatbot::index');
+    }
+
+    /**
+     * Handle the chatbot message request.
+     */
+    public function handleMessage(Request $request)
+    {
+        $request->validate([
+            'message' => 'required|string',
+        ]);
+
+        $userMessage = $request->input('message');
+        
+        // In a real scenario, you would call an AI API here (OpenAI, Gemini, etc.)
+        // For now, we'll provide a smart-looking mock response.
+        
+        $response = $this->getAiResponse($userMessage);
+
+        return response()->json([
+            'status' => 'success',
+            'message' => $response,
+        ]);
+    }
+
+    /**
+     * Sophisticated response logic for the portfolio.
+     */
+    private function getAiResponse($message)
+    {
+        $message = strtolower($message);
+        
+        // Knowledge Base - Priority ordered (Specific -> Generic)
+        $kb = [
+            'contact' => [
+                'keywords' => ['contact', 'email', 'phone', 'call', 'skype', 'whatsapp', 'reach', 'mobile', 'address'],
+                'response' => "You can reach Nirbhay directly:\n- **Email**: nirbhaydhaked@gmail.com\n- **Phone/Whatsapp**: +91 8209-99-0511\n- **Skype**: live:718c6b5c940cd730\n- Or use the contact form at the bottom of this page!"
+            ],
+            'resume' => [
+                'keywords' => ['resume', 'cv', 'biodata', 'curriculum vitae', 'profile file', 'download resume'],
+                'response' => "Sure! You can download Nirbhay's professional resume here: [📄 Download Resume (PDF)](/Nirbhay%20Singh%20SR.%20Laravel%20Developer.pdf)"
+            ],
+            'education' => [
+                'keywords' => ['education', 'edu', 'degree', 'mca', 'bca', 'university', 'college', 'studied', 'qualification', 'educations'],
+                'response' => "Nirbhay holds an **MCA (Honours)** from RTU, Kota and a **BCA** from UOR, Jaipur. He has a strong academic foundation in computer applications and systems architecture."
+            ],
+            'location' => [
+                'keywords' => ['jaipur', 'india', 'where', 'location', 'city', 'rajasthan'],
+                'response' => "Nirbhay is based in **Jaipur, Rajasthan (India)**. He is widely recognized as a top **Laravel Expert in Jaipur** and serves clients globally including India, UAE, and USA."
+            ],
+            'skills' => [
+                'keywords' => ['skills', 'tech', 'technology', 'stack', 'backend', 'api', 'mysql', 'redis', 'jquery', 'expert'],
+                'response' => "His core technical stack includes:\n- **Framework**: Laravel (all versions including 12)\n- **Backend**: Core PHP, RESTful APIs\n- **Database**: MySQL (Optimization expert), Redis\n- **Frontend**: jQuery, Ajax, HTML5/CSS3\n- **DevOps**: Linux Server Management, Git, CI/CD"
+            ],
+            'services' => [
+                'keywords' => ['services', 'hire', 'work', 'projects', 'build', 'cost', 'pricing', 'develop'],
+                'response' => "Nirbhay offers premium services in:\n- **SaaS Architecture**\n- **Custom CRM Solutions**\n- **Payment Gateway Integration**\n- **Third-party API Integrations**\n- **Database Performance Tuning**"
+            ],
+            'experience' => [
+                'keywords' => ['experience', 'exp', 'exp.', 'years', 'senior', 'career', 'journey', 'work history', 'professional experience', 'where worked', 'companies'],
+                'response' => "Nirbhay's professional journey spans over **12+ years**. Here is his career timeline:\n\n" .
+                              "<div class='chat-timeline'>" .
+                              "<div class='timeline-item'><div class='timeline-dot'></div><div class='timeline-content'><strong>Senior Laravel Developer & Tech Lead</strong><br><small>MOBIIWORLD | Nov 2025 - Present</small></div></div>" .
+                              "<div class='timeline-item'><div class='timeline-dot'></div><div class='timeline-content'><strong>Software Engineer (Laravel Module Lead)</strong><br><small>OPTIMA TAX RELIEF | Jan 2025 - Nov 2025</small></div></div>" .
+                              "<div class='timeline-item'><div class='timeline-dot'></div><div class='timeline-content'><strong>Sr. Laravel Developer & Tech Lead</strong><br><small>KONSTANT INFOSOLUTIONS | Dec 2017 - Nov 2024</small></div></div>" .
+                              "<div class='timeline-item'><div class='timeline-dot'></div><div class='timeline-content'><strong>Senior Software Engineer</strong><br><small>ARKA SOFTWARES | Jun 2016 - Dec 2017</small></div></div>" .
+                              "<div class='timeline-item'><div class='timeline-dot'></div><div class='timeline-content'><strong>PHP Developer</strong><br><small>WDP TECHNOLOGIES | Sep 2015 - Jun 2016</small></div></div>" .
+                              "<div class='timeline-item'><div class='timeline-dot'></div><div class='timeline-content'><strong>Web Programmer & Developer</strong><br><small>ECARE SOFTECH | Sep 2014 - Sep 2015</small></div></div>" .
+                              "</div>\n\n" .
+                              "![Professional Experience Timeline](/images/professional-experience.png)\n\n" .
+                              "*(Click the image above to download the full timeline profile)*\n\n" .
+                              "[📄 Download Full CV (PDF)](/Nirbhay%20Singh%20SR.%20Laravel%20Developer.pdf)"
+            ],
+            'laravel' => [
+                'keywords' => ['laravel', 'framework', 'php'],
+                'response' => "Nirbhay is a **Laravel Expert**. He has been working with Laravel since its early versions and is proficient in its latest features (including Laravel 12)."
+            ],
+            'who' => [
+                'keywords' => ['who are you', 'how many', 'assistant', 'bot'],
+                'response' => "I am an AI assistant for **Nirbhay Dhaked**, a Senior Laravel Expert based in Jaipur, India. I can tell you about his skills, experience, or how to reach him!"
+            ],
+            'nirbhay' => [
+                'keywords' => ['nirbhay', 'dhaked', 'the developer', 'author'],
+                'response' => "**Nirbhay Dhaked** is a dedicated Senior **Technology Lead & Laravel Expert** with over 12 years of experience building robust, scalable web applications."
+            ],
+            'greeting' => [
+                'keywords' => ['hello', 'hi', 'hey', 'greetings', 'namaste'],
+                'response' => "Hello! I'm Nirbhay's AI assistant. How can I help you today? You can ask about his **education**, **skills**, or **location**."
+            ]
+        ];
+
+        // Search for a match in priority order
+        foreach ($kb as $intent => $data) {
+            foreach ($data['keywords'] as $keyword) {
+                // Check if the keyword exists as a whole word boundary match
+                if (preg_match("/\b" . preg_quote($keyword, '/') . "\b/i", $message)) {
+                    return $data['response'];
+                }
+            }
+        }
+
+        // Secondary search (partial matches)
+        foreach ($kb as $intent => $data) {
+            foreach ($data['keywords'] as $keyword) {
+                if (str_contains($message, $keyword)) {
+                    return $data['response'];
+                }
+            }
+        }
+
+        // Context-aware fallback
+        if (str_contains($message, '?')) {
+            return "That's an interesting question! For specific technical queries, you might want to contact Nirbhay directly at **nirbhaydhaked@gmail.com**.";
+        }
+
+        return "I'm here to help! You can ask me about Nirbhay's **experience**, his **skills** in Laravel, his **education**, or his **location** in Jaipur, India.";
+    }
+}

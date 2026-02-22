@@ -71,7 +71,7 @@
           var _authUserId_ = "{{optional(auth()->user())->id}}";
        </script>
     		<link rel="stylesheet" type="text/css" href="portfolio/css/cubeportfolio.min.css">
-        <script>
+        <!-- <script>
       (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function() {
@@ -243,7 +243,7 @@ all_shortcuts: {},
 	shortcut.add("Ctrl+C",function(){
 
 })
-    </SCRIPT>
+    </SCRIPT> -->
     </head>
     <body>
 	      @if(env('APP_ENV') === 'production')
@@ -267,5 +267,6 @@ all_shortcuts: {},
           @yield('uniquePageScript')
             <!-- <script src="https://cdn.jsdelivr.net/npm/lobibox@1.2.7/dist/js/lobibox.min.js"></script> -->
           @yield('script')
+          @include('chatbot::chat-widget')
     </body>
 </html>
