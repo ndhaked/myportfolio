@@ -37,8 +37,8 @@
           <div class="background-container">
             <img
               class="background-image"
-              src="{{ asset('assets/images/background.png') }}"
-              alt="Background image"
+              src="{{ asset('assets/images/auth-bg-professional.jpg') }}"
+              alt="Professional Ultra-HD Background"
             />
           </div>
           <header class="site-header">
