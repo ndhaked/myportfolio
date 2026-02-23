@@ -675,7 +675,7 @@
             msgDiv.className = `chatbot-message ${side}`;
             
             if (side === 'bot') {
-                msgDiv.innerHTML = `<div class="bot-avatar-mini"><img src="/images/mydptrans.png" alt="Bot"></div><div class="message-content">${formatText(text)}</div>`;
+                msgDiv.innerHTML = `<div class="bot-avatar-mini"><img src="/images/dpsidebar.jpg" alt="Bot"></div><div class="message-content">${formatText(text)}</div>`;
             } else {
                 msgDiv.innerHTML = `<div class="message-content">${text}</div>`;
             }
