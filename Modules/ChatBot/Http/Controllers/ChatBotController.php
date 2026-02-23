@@ -141,6 +141,82 @@ class ChatBotController extends Controller
                 'keywords' => ['nirbhay', 'dhaked', 'the developer', 'author', 'laravel expert', 'expert'],
                 'response' => "**Nirbhay Dhaked** is a dedicated Senior **Technology Lead & Laravel Expert** with over 12 years of experience building robust, scalable web applications."
             ],
+            'thank_you' => [
+                'keywords' => [
+                    'thank you',
+                    'thanks',
+                    'thnx',
+                    'thank u',
+                    'ty',
+                    'thanks a lot',
+                    'thankyou',
+                    'ok thanks',
+                    'great thanks'
+                ],
+                'responses' => [
+                    "You're most welcome 😊 If you need anything else, feel free to ask!",
+                    "Glad I could help! Let me know if you'd like to book a meeting with Nirbhay.",
+                    "My pleasure! I'm here if you have more questions.",
+                    "Happy to help 🙌 Feel free to explore more about Nirbhay's experience or services.",
+                    "Anytime! Have a great day ahead 🚀"
+                ]
+            ],
+            'projects' => [
+                'keywords' => [
+                    'projects',
+                    'project list',
+                    'what projects',
+                    'what have you built',
+                    'portfolio projects',
+                    'laravel projects',
+                    'work experience projects',
+                    'real world projects',
+                    'systems developed',
+                    'applications built',
+                    'experience in projects',
+                    'what kind of apps'
+                ],
+                'response' => "Here are some major Laravel-based projects Nirbhay has worked on:\n\n" .
+
+                "🚀 **Super App Architecture**\n" .
+                "- Food Delivery System\n" .
+                "- Ride Booking Platform\n" .
+                "- Cab Booking System\n" .
+                "- Logistics & Parcel Delivery Module\n" .
+                "- Multi-Service Marketplace\n\n" .
+
+                "🛒 **E-Commerce & Marketplace Platforms**\n" .
+                "- Multi-vendor Marketplace\n" .
+                "- Advanced Product Variant System\n" .
+                "- Wallet & Referral System\n" .
+                "- Dynamic Pricing & Coupons\n" .
+                "- Payment Gateway Integrations (Razorpay, PayPal, Cashfree, Stripe)\n\n" .
+
+                "💼 **Custom CRM & Enterprise Systems**\n" .
+                "- Tax Management System (USA Client)\n" .
+                "- Custom Lead Management CRM\n" .
+                "- Role-based Access Control Systems\n" .
+                "- Automated Workflow & Task Management Systems\n\n" .
+
+                "📊 **SaaS Platforms**\n" .
+                "- Subscription-based SaaS Applications\n" .
+                "- Multi-tenant Architecture\n" .
+                "- API-first Backend Systems\n" .
+                "- Scalable Database Optimized Systems\n\n" .
+
+                "⚡ **Performance & Optimization Work**\n" .
+                "- Complex Query Optimization\n" .
+                "- Database Indexing & Scaling\n" .
+                "- Redis Caching Implementation\n" .
+                "- API Response Optimization\n\n" .
+
+                "🤖 **AI & Automation Integrations**\n" .
+                "- AI Chatbot Integrations (Gemini/OpenAI)\n" .
+                "- Automation APIs\n" .
+                "- Smart Recommendation Systems\n\n" .
+
+                "Nirbhay has over **12+ years of hands-on experience** building scalable, secure, and high-performance Laravel applications."
+            ],
             'greeting' => [
                 'keywords' => ['hello', 'hi', 'hey', 'greetings', 'namaste'],
                 'response' => "Hello! I'm Nirbhay's AI assistant. How can I help you today? You can ask about his **education**, **skills**, or **location**."
