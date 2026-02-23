@@ -52,7 +52,7 @@ class ChatBotController extends Controller
             ],
             'current_company' => [
                 'keywords' => ['current company', 'currently working', 'where working now', 'present company', 'which company currently working nirbhay'],
-                'response' => "Nirbhay is currently working at **Mobibor Pvt. Limited** as a Senior Laravel Developer & Tech Lead."
+                'response' => "Nirbhay is currently working at **MOBIIWORLD Pvt. Limited | Nov 2025 - Present** as a Senior Laravel Developer & Tech Lead."
             ],
             'availability' => [
                 'keywords' => ['available', 'availability', 'freelance', 'hire now', 'open for work', 'open to work', 'can we hire'],
