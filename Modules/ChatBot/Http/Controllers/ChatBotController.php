@@ -144,8 +144,16 @@ class ChatBotController extends Controller
             'thank_you' => [
                 'keywords' => [
                     'thank you',
+                    'thank you so much',
+                    'dhanyabad',
+                    'dhanyabaad',
+                    'badiya',
+                    'bahut acha',
+                    'bahut achha',
+                    'ok',
                     'thanks',
                     'thnx',
+                    'thx',
                     'thank u',
                     'ty',
                     'thanks a lot',
@@ -153,13 +161,12 @@ class ChatBotController extends Controller
                     'ok thanks',
                     'great thanks'
                 ],
-                'responses' => [
-                    "You're most welcome 😊 If you need anything else, feel free to ask!",
-                    "Glad I could help! Let me know if you'd like to book a meeting with Nirbhay.",
-                    "My pleasure! I'm here if you have more questions.",
-                    "Happy to help 🙌 Feel free to explore more about Nirbhay's experience or services.",
-                    "Anytime! Have a great day ahead 🚀"
-                ]
+                'responses' => 
+                    "- You're most welcome 😊 If you need anything else, feel free to ask!\n" .
+                    "- Glad I could help! Let me know if you'd like to book a **meeting with Nirbhay**.\n" .
+                    "- My pleasure! I'm here if you have more questions.\n" .
+                    "- Happy to help 🙌 Feel free to explore more about **Nirbhay's** experience or services.\n" .
+                    "- Anytime! Have a great day ahead 🚀\n"
             ],
             'projects' => [
                 'keywords' => [
