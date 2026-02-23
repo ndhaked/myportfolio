@@ -71,7 +71,7 @@
           var _authUserId_ = "{{optional(auth()->user())->id}}";
        </script>
     		<link rel="stylesheet" type="text/css" href="portfolio/css/cubeportfolio.min.css">
-        <!-- <script>
+        <script>
       (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function() {
@@ -243,7 +243,7 @@ all_shortcuts: {},
 	shortcut.add("Ctrl+C",function(){
 
 })
-    </SCRIPT> -->
+    </SCRIPT>
     </head>
     <body>
 	      @if(env('APP_ENV') === 'production')

@@ -46,6 +46,50 @@ class ChatBotController extends Controller
         
         // Knowledge Base - Priority ordered (Specific -> Generic)
         $kb = [
+            'good_morning' => [
+                'keywords' => ['good morning', 'morning nirbhay', 'gm nirbhay'],
+                'response' => "Very Good Morning ☀️ and have a nice day! How can we help you today? You can also book a meeting with Nirbhay to discuss your project."
+            ],
+            'current_company' => [
+                'keywords' => ['current company', 'currently working', 'where working now', 'present company', 'which company currently working nirbhay'],
+                'response' => "Nirbhay is currently working at **Mobibor Pvt. Limited** as a Senior Laravel Developer & Tech Lead."
+            ],
+            'availability' => [
+                'keywords' => ['available', 'availability', 'freelance', 'hire now', 'open for work', 'open to work', 'can we hire'],
+                'response' => "Yes, Nirbhay is available for freelance and long-term projects. You can book a meeting to discuss your requirements or reach out directly via email or WhatsApp."
+            ],
+            'meeting' => [
+                'keywords' => ['meeting', 'book call', 'schedule call', 'zoom meeting', 'consultation', 'appointment'],
+                'response' => "You can schedule a meeting with Nirbhay to discuss your project requirements. Please use the contact form or message directly on WhatsApp to fix a time."
+            ],
+            'pricing' => [
+                'keywords' => ['price', 'cost', 'budget', 'charges', 'rate', 'salary', 'hourly rate'],
+                'response' => "Project pricing depends on scope and complexity. For an accurate estimate, please share your requirements and Nirbhay will provide a tailored quote."
+            ],
+            'remote' => [
+                'keywords' => ['remote', 'work remotely', 'onsite', 'hybrid', 'international clients'],
+                'response' => "Nirbhay works with clients globally and is comfortable with remote, hybrid, and international collaboration."
+            ],
+            'leadership' => [
+                'keywords' => ['team lead', 'leadership', 'manage team', 'technical lead', 'architect'],
+                'response' => "Nirbhay has extensive experience leading development teams, designing scalable architectures, and mentoring junior developers."
+            ],
+            'ai' => [
+                'keywords' => ['ai', 'chatbot', 'automation', 'machine learning', 'gemini', 'openai'],
+                'response' => "Nirbhay also works on AI-powered solutions including chatbot integrations, automation systems, and API-driven intelligent workflows."
+            ],
+            'payment' => [
+                'keywords' => ['payment', 'razorpay', 'paypal', 'cashfree', 'stripe', 'gateway integration'],
+                'response' => "Nirbhay has deep experience integrating secure payment gateways including Razorpay, PayPal, Cashfree, Stripe, and custom payment workflows."
+            ],
+            'database' => [
+                'keywords' => ['database', 'mysql optimization', 'query optimization', 'performance', 'slow queries'],
+                'response' => "Nirbhay specializes in database optimization, complex query tuning, indexing strategies, and performance improvements for large-scale Laravel applications."
+            ],
+            'saas' => [
+                'keywords' => ['saas', 'multi vendor', 'super app', 'food delivery app', 'ride booking', 'marketplace'],
+                'response' => "Nirbhay has architected and developed scalable SaaS platforms and Super Apps including food delivery, ride booking, logistics, and multi-vendor marketplace systems."
+            ],
             'contact' => [
                 'keywords' => ['contact', 'email', 'phone', 'call', 'skype', 'whatsapp', 'reach', 'mobile', 'address'],
                 'response' => "You can reach Nirbhay directly:\n- **Email**: nirbhaydhaked@gmail.com\n- **Phone/Whatsapp**: +91 8209-99-0511\n- **Skype**: live:718c6b5c940cd730\n- Or use the contact form at the bottom of this page!"
