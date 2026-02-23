@@ -107,8 +107,8 @@ class ChatBotController extends Controller
                 'response' => "Nirbhay is based in **Jaipur, Rajasthan (India)**. He is widely recognized as a top **Laravel Expert in Jaipur** and serves clients globally including India, UAE, and USA."
             ],
             'skills' => [
-                'keywords' => ['skills', 'tech', 'technology', 'stack', 'backend', 'api', 'mysql', 'redis', 'jquery', 'expert', 'postgre', 'pgsql'],
-                'response' => "His core technical stack includes:\n- **Framework**: Laravel (all versions including 12)\n- **Backend**: Core PHP, RESTful APIs\n- **Database**: MySQL (Optimization expert), Redis\n- **Frontend**: jQuery, Ajax, HTML5/CSS3\n- **DevOps**: Linux Server Management, Git, CI/CD"
+                'keywords' => ['skills', 'tech', 'technology', 'stack', 'backend', 'api', 'mysql', 'redis', 'jquery', 'expertise', 'postgre', 'pgsql'],
+                'response' => "His core technical stack includes:\n- **Framework**: Laravel (all versions including 12)\n- **Backend**: Core PHP, RESTful APIs\n- **Database**: MySQL (Optimization expert), PgSQL,  Redis\n- **Frontend**: jQuery, Ajax, HTML5/CSS3\n- **DevOps**: Linux Server Management, Git, CI/CD"
             ],
             'services' => [
                 'keywords' => ['services', 'hire', 'work', 'projects', 'build', 'cost', 'pricing', 'develop'],
