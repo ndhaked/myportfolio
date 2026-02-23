@@ -111,7 +111,7 @@ class ChatBotController extends Controller
                 'response' => "His core technical stack includes:\n- **Framework**: Laravel (all versions including 12)\n- **Backend**: Core PHP, RESTful APIs\n- **Database**: MySQL (Optimization expert), PgSQL,  Redis\n- **Frontend**: jQuery, Ajax, HTML5/CSS3\n- **DevOps**: Linux Server Management, Git, CI/CD"
             ],
             'services' => [
-                'keywords' => ['services', 'hire', 'work', 'projects', 'build', 'cost', 'pricing', 'develop'],
+                'keywords' => ['services', 'hire', 'work', 'build', 'cost', 'pricing', 'develop'],
                 'response' => "Nirbhay offers premium services in:\n- **SaaS Architecture**\n- **Custom CRM Solutions**\n- **Payment Gateway Integration**\n- **Third-party API Integrations**\n- **Database Performance Tuning**"
             ],
             'experience' => [
