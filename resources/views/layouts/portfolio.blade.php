@@ -243,7 +243,7 @@ all_shortcuts: {},
 	shortcut.add("Ctrl+C",function(){
 
 })
-    </SCRIPT>
+    </script>
     </head>
     <body>
 	      @if(env('APP_ENV') === 'production')
