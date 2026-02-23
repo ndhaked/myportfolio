@@ -63,7 +63,7 @@ class ChatBotController extends Controller
                 'response' => "You can schedule a meeting with Nirbhay to discuss your project requirements. Please use the contact form or message directly on WhatsApp to fix a time."
             ],
             'pricing' => [
-                'keywords' => ['price', 'cost', 'budget', 'charges', 'rate', 'salary', 'hourly rate'],
+                'keywords' => ['price', 'pricing', 'cost', 'budget', 'charges', 'rate', 'salary', 'hourly rate'],
                 'response' => "Project pricing depends on scope and complexity. For an accurate estimate, please share your requirements and Nirbhay will provide a tailored quote."
             ],
             'remote' => [
@@ -83,7 +83,7 @@ class ChatBotController extends Controller
                 'response' => "Nirbhay has deep experience integrating secure payment gateways including Razorpay, PayPal, Cashfree, Stripe, and custom payment workflows."
             ],
             'database' => [
-                'keywords' => ['database', 'mysql optimization', 'query optimization', 'performance', 'slow queries'],
+                'keywords' => ['database', 'db', 'mysql optimization', 'query optimization', 'performance', 'slow queries'],
                 'response' => "Nirbhay specializes in database optimization, complex query tuning, indexing strategies, and performance improvements for large-scale Laravel applications."
             ],
             'saas' => [
@@ -107,7 +107,7 @@ class ChatBotController extends Controller
                 'response' => "Nirbhay is based in **Jaipur, Rajasthan (India)**. He is widely recognized as a top **Laravel Expert in Jaipur** and serves clients globally including India, UAE, and USA."
             ],
             'skills' => [
-                'keywords' => ['skills', 'tech', 'technology', 'stack', 'backend', 'api', 'mysql', 'redis', 'jquery', 'expert'],
+                'keywords' => ['skills', 'tech', 'technology', 'stack', 'backend', 'api', 'mysql', 'redis', 'jquery', 'expert', 'postgre', 'pgsql'],
                 'response' => "His core technical stack includes:\n- **Framework**: Laravel (all versions including 12)\n- **Backend**: Core PHP, RESTful APIs\n- **Database**: MySQL (Optimization expert), Redis\n- **Frontend**: jQuery, Ajax, HTML5/CSS3\n- **DevOps**: Linux Server Management, Git, CI/CD"
             ],
             'services' => [
@@ -138,7 +138,7 @@ class ChatBotController extends Controller
                 'response' => "I am an AI assistant for **Nirbhay Dhaked**, a Senior Laravel Expert based in Jaipur, India. I can tell you about his skills, experience, or how to reach him!"
             ],
             'nirbhay' => [
-                'keywords' => ['nirbhay', 'dhaked', 'the developer', 'author'],
+                'keywords' => ['nirbhay', 'dhaked', 'the developer', 'author', 'laravel expert', 'expert'],
                 'response' => "**Nirbhay Dhaked** is a dedicated Senior **Technology Lead & Laravel Expert** with over 12 years of experience building robust, scalable web applications."
             ],
             'greeting' => [
