@@ -29,7 +29,7 @@
             <li><a href="https://www.facebook.com/dnirbhay" target="_blank">Facebook</a></li>
             <li><a href="https://twitter.com/ndhaked" target="_blank">Twitter</a></li>
             <li><a href="https://plus.google.com/u/0/115712836675253430474" target="_blank">Google+</a></li>
-            <li><a href="https://www.linkedin.com/in/ndhaked" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.linkedin.com/in/dhaked/" target="_blank">Linkedin</a></li>
             <li><a href="skype:live:718c6b5c940cd730">Skype</a></li>
           </ul>
         </nav>
@@ -42,56 +42,14 @@
         <span>Senior Technology Lead</span>
       </div>
       <div class="text-right">
-        <a href="{{ asset('public/Nirbhay Singh SR. Laravel Developer.pdf') }}" download class="button link-button white icon-left">
+        <a href="{{ asset('Nirbhay Singh SR. Laravel Developer.pdf') }}" download class="button link-button white icon-left">
           <i class="md md-file-download"></i>Download Resume</a>
       </div>
     </header>
     <div class="slide-out-widgets">
       <div class="slide-out-widget">
         <h4 id="sidebar-form-title">Drink A Coffee With Me Today</h4>
-        <form action="{{ route('contactusSubmit') }}" method="post" class="form-horizontal contact-form">
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Name</label>
-                <div class="col-sm-9">
-                    <input type="text" class="contact-name" name="contact-name" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Email</label>
-                <div class="col-sm-9">
-                    <input type="email" class="contact-email" name="contact-email" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Phone</label>
-                <div class="col-sm-9">
-                    <input type="text" class="contact-phone" name="contact_phone" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Message</label>
-                <div class="col-sm-9">
-                    <textarea name="contact-message" class="contact-message" rows="3"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-9 col-sm-offset-3">
-                    <button type="submit" class="button solid-button purple">Send Message</button>
-                </div>
-            </div>
-            <div class="contact-loading alert alert-info form-alert" style="display:none;">
-                <span class="message">Sending Request...</span>
-                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
-            </div>
-            <div class="contact-success alert alert-success form-alert" style="display:none;">
-                <span class="message">Success!</span>
-                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
-            </div>
-            <div class="contact-error alert alert-danger form-alert" style="display:none;">
-                <span class="message">Error!</span>
-                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
-            </div>
-        </form>
+        <livewire:contact-form :compact="true" wire:key="contact-form-seo-sidebar" />
       </div>
       <div class="slide-out-widget">
         <h4>Connect on Social Network</h4>
@@ -99,7 +57,7 @@
           <a class="social-icon" href="https://www.facebook.com/dnirbhay" target="_blank"><i class="fa fa-facebook"></i></a>
           <a class="social-icon" href="https://twitter.com/ndhaked" target="_blank"><i class="fa fa-twitter"></i></a>
           <a class="social-icon" href="https://plus.google.com/u/0/115712836675253430474" target="_blank"><i class="fa fa-google-plus"></i></a>
-          <a href="https://www.linkedin.com/in/ndhaked" class="social-icon" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/dhaked/" class="social-icon" target="_blank"><i class="fa fa-linkedin"></i></a>
           <a class="social-icon" href="skype:live:718c6b5c940cd730"><i class="fa fa-skype"></i></a>
         </div>
       </div>
@@ -115,7 +73,7 @@
         <a href="#" class="open-search header-open-search">
           <i class="md md-search" style="display:none;"></i>
         </a>
-        <a href="{{ asset('public/Nirbhay Singh SR. Laravel Developer.pdf') }}" download class="download">
+        <a href="{{ asset('Nirbhay Singh SR. Laravel Developer.pdf') }}" download class="download">
           <i class="md md-file-download"></i>
         </a>
         <a href="#" class="share">
@@ -128,7 +86,7 @@
             <li><a href="https://www.facebook.com/dnirbhay" target="_blank">Facebook</a></li>
             <li><a href="https://twitter.com/ndhaked" target="_blank">Twitter</a></li>
             <li><a href="https://plus.google.com/u/0/115712836675253430474" target="_blank">Google+</a></li>
-            <li><a href="https://www.linkedin.com/in/ndhaked" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.linkedin.com/in/dhaked/" target="_blank">Linkedin</a></li>
             <li><a href="skype:live:718c6b5c940cd730">Skype</a></li>
           </ul>
         </nav>
@@ -153,6 +111,7 @@
           <li><a href="{{ url('/') }}#section4">Experience</a></li>
           <li><a href="{{ url('/') }}#section5">Education</a></li>
           <li><a href="{{ url('/') }}#section6">Work</a></li>
+          <li><a href="{{ url('/') }}#section7">Reviews</a></li>
           <li><a href="#" class="open-sidebar-form">Contact</a></li>
         </ul>
       </nav>

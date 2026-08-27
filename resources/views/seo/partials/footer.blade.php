@@ -18,7 +18,7 @@
               <a class="social-icon" href="https://plus.google.com/u/0/115712836675253430474" target="_blank">
                 <i class="fa fa-google-plus"></i>
               </a>
-              <a href="https://www.linkedin.com/in/ndhaked" class="social-icon" target="_blank">
+              <a href="https://www.linkedin.com/in/dhaked/" class="social-icon" target="_blank">
                 <i class="fa fa-linkedin" target="_blank"></i>
               </a>
               <a class="social-icon" href="skype:live:718c6b5c940cd730">

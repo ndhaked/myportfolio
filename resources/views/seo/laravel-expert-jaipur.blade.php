@@ -30,7 +30,7 @@
   "areaServed": ["Jaipur", "India", "USA", "UK", "Australia", "Middle East"],
   "knowsAbout": ["Laravel", "PHP", "REST API", "SaaS", "MySQL", "Redis", "Web Development"],
   "sameAs": [
-    "https://www.linkedin.com/in/ndhaked",
+    "https://www.linkedin.com/in/dhaked/",
     "https://twitter.com/ndhaked",
     "https://www.facebook.com/dnirbhay"
   ]

@@ -30,7 +30,7 @@
   },
   "knowsAbout": ["Laravel", "PHP", "MySQL", "REST API", "SaaS", "Redis", "Docker", "AWS"],
   "sameAs": [
-    "https://www.linkedin.com/in/ndhaked",
+    "https://www.linkedin.com/in/dhaked/",
     "https://twitter.com/ndhaked",
     "https://www.facebook.com/dnirbhay"
   ]

@@ -1,5 +1,5 @@
 @extends('layouts.portfolio')
-@section('content') 
+@section('content')
 <div class="search-overlay"></div>
   <div class="search">
     <a href="#" class="search-close">
@@ -32,13 +32,10 @@
               <a href="https://www.facebook.com/dnirbhay" target="_blank">Facebook</a>
             </li>
             <li>
-              <a href="www.twitter.com/ndhaked" target="_blank">Twitter</a>
+              <a href="https://twitter.com/ndhaked" target="_blank">Twitter</a>
             </li>
             <li>
-              <a href="https://plus.google.com/u/0/115712836675253430474" target="_blank">Google+</a>
-            </li>
-            <li>
-              <a href="www.linkedin.com/in/ndhaked" target="_blank">Linkedin</a>
+              <a href="https://www.linkedin.com/in/dhaked/" target="_blank">Linkedin</a>
             </li>
             <li>
               <a href="skype:live:718c6b5c940cd730">Skype</a>
@@ -47,67 +44,21 @@
         </nav>
       </div>
       <div class="image">
-        <img src="images/dpsidebar.jpg" alt="alt text" class="img-responsive">
+        <img src="{{ asset('images/dpsidebar.jpg') }}" alt="Nirbhay Dhaked" class="img-responsive">
       </div>
       <div class="content">
         <h5>Nirbhay Dhaked</h5>
         <span>Senior Technology Lead</span>
       </div>
       <div class="text-right">
-        <a href="public/Nirbhay Singh SR. Laravel Developer.pdf" download class="button link-button white icon-left">
+        <a href="{{ asset('Nirbhay Singh SR. Laravel Developer.pdf') }}" download class="button link-button white icon-left">
           <i class="md md-file-download"></i>Download Resume </a>
-        <br>
-        <a href="download-area/riyaz.zip" class="button link-button white icon-left" style="display:none;">
-          <i class="md md-file-download"></i>Download Android App </a>
       </div>
     </header>
     <div class="slide-out-widgets">
       <div class="slide-out-widget">
         <h4>Drink A Coffee With Me Today</h4>
-        <form action="{{ route('contactusSubmit') }}" method="post" class="form-horizontal contact-form">
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Name</label>
-                <div class="col-sm-9">
-                    <input type="text" class="contact-name" name="contact-name" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Email</label>
-                <div class="col-sm-9">
-                    <input type="email" class="contact-email" name="contact-email" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Phone</label>
-                <div class="col-sm-9">
-                    <input type="text" class="contact-phone" name="contact_phone" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Message</label>
-                <div class="col-sm-9">
-                    <textarea name="contact-message" class="contact-message" rows="3"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-9 col-sm-offset-3">
-                    <button type="submit" class="button solid-button purple">Send Message</button>
-                </div>
-            </div>
-            
-            <div class="contact-loading alert alert-info form-alert" style="display:none;">
-                <span class="message">Sending Request...</span>
-                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
-            </div>
-            <div class="contact-success alert alert-success form-alert" style="display:none;">
-                <span class="message">Success!</span>
-                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
-            </div>
-            <div class="contact-error alert alert-danger form-alert" style="display:none;">
-                <span class="message">Error!</span>
-                <button type="button" class="close" onclick="$(this).parent().hide();">×</button>
-            </div>
-        </form>
+        <livewire:contact-form :compact="true" wire:key="contact-form-sidebar" />
       </div>
       <div class="slide-out-widget">
         <h4>Connect on Social Network</h4>
@@ -118,10 +69,7 @@
           <a class="social-icon" href="https://twitter.com/ndhaked" target="_blank">
             <i class="fa fa-twitter"></i>
           </a>
-          <a class="social-icon" href="https://plus.google.com/u/0/115712836675253430474" target="_blank">
-            <i class="fa fa-google-plus"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/ndhaked" class="social-icon" target="_blank">
+          <a href="https://www.linkedin.com/in/dhaked/" class="social-icon" target="_blank">
             <i class="fa fa-linkedin" target="_blank"></i>
           </a>
           <a class="social-icon" href="skype:live:718c6b5c940cd730">
@@ -133,7 +81,7 @@
   </div>
   <header class="header">
     <div class="top clearfix">
-      <a href="#section7" class="available">
+      <a href="#section8" class="available">
         <i class="ion-ios-email-outline"></i>
         <span>Connect to me</span>
       </a>
@@ -141,7 +89,7 @@
         <a href="#" class="open-search header-open-search">
           <i class="md md-search" style="display:none;"></i>
         </a>
-        <a href="public/Nirbhay Singh SR. Laravel Developer.pdf" download class="download">
+        <a href="{{ asset('Nirbhay Singh SR. Laravel Developer.pdf') }}" download class="download">
           <i class="md md-file-download"></i>
         </a>
         <a href="#" class="share">
@@ -158,10 +106,7 @@
               <a href="https://twitter.com/ndhaked" target="_blank">Twitter</a>
             </li>
             <li>
-              <a href="https://plus.google.com/u/0/115712836675253430474" target="_blank">Google+</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/ndhaked" target="_blank">Linkedin</a>
+              <a href="https://www.linkedin.com/in/dhaked/" target="_blank">Linkedin</a>
             </li>
             <li>
               <a href="skype:live:718c6b5c940cd730">Skype</a>
@@ -172,7 +117,7 @@
     </div>
     <div class="bottom clearfix">
       <div class="title">
-        <a href="{{URL::to('/')}}">Nirbhay Dhaked</a>
+        <a href="{{ URL::to('/') }}">Nirbhay Dhaked</a>
       </div>
       <div class="header-action-button-wrapper">
         <a href="#" class="header-action-button action-button">
@@ -202,7 +147,10 @@
             <a href="#section6">Work</a>
           </li>
           <li>
-            <a href="#section7">Contact</a>
+            <a href="#section7">Reviews</a>
+          </li>
+          <li>
+            <a href="#section8">Contact</a>
           </li>
         </ul>
       </nav>
@@ -215,20 +163,19 @@
   </div>
   <div class="sections">
     <div class="sections-wrapper clearfix">
-      <section id="section1" class="no-padding-bottom active">
+      <section id="section1" class="active">
         <div class="container">
           <div class="row">
-            <div class="col-sm-7 vertical-center padding-fix">
+            <div class="col-sm-7 vertical-center">
               <h1>Senior PHP Architect <sup>&</sup> Laravel <sup>Expert</sup>
               </h1>
               <p>I am a dedicated <strong>Senior Technology Lead & Laravel Expert</strong> with 12+ years of extensive experience. I don't just write code; I engineer robust, scalable web applications that drive business growth. From complex API ecosystems to high-traffic database architectures, my expertise lies in transforming raw requirements into efficient, secure, and maintainable software. Proficient in Agile methodologies and MySQL optimization, I help innovative companies build the future of their IT infrastructure. </p>
               <p class="button-row">
-                <a href="public/Nirbhay Singh SR. Laravel Developer.pdf" download class="button solid-button purple">Download CV</a>
-                <a href="download-area/riyaz.zip" class="button solid-button white" style="display:none;">Download Android App</a>
+                <a href="{{ asset('Nirbhay Singh SR. Laravel Developer.pdf') }}" download class="button solid-button purple">Download CV</a>
               </p>
             </div>
             <div class="col-sm-5 vertical-center">
-                <div class="image"><img src="images/mydphome.png" alt="alt text" class="img-responsive"></div>
+                <div class="image"><img src="{{ asset('images/mydphome.png') }}" alt="Nirbhay Dhaked" class="img-responsive"></div>
             </div>
           </div>
         </div>
@@ -238,7 +185,7 @@
           <h2>About Me</h2>
           <div class="row">
             <div class="col-sm-3">
-        <img src="images/abtimgdp.png" alt="Nirbhay Dhaked" class="img-responsive section-img">
+        <img src="{{ asset('images/abtimgdp.png') }}" alt="Nirbhay Dhaked" class="img-responsive section-img">
       </div>
             <div class="col-sm-9">
               <h3 class="small-margin-bottom">Nirbhay Dhaked</h3>
@@ -312,10 +259,22 @@
                   <span>95%</span>
                 </div>
               </div>
+              <label class="progress-bar-label">Vibe Coding (AI-Assisted Development)</label>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <span>90%</span>
+                </div>
+              </div>
               <label class="progress-bar-label">MySQL / Database Design</label>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   <span>90%</span>
+                </div>
+              </div>
+              <label class="progress-bar-label">PostgreSQL</label>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <span>85%</span>
                 </div>
               </div>
               <label class="progress-bar-label">REST API Development</label>
@@ -602,71 +561,16 @@
       <section id="section6">
         <div class="container">
           <h2>Projects & Applications</h2>
-          <div class="wb-grid">
-            <div class="wb-center">
-              <div class="grid">
-                <div id="js-filters-juicy-projects" class="cbp-l-filters-button">
-                  <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> All Projects <div class="cbp-filter-counter"></div>
-                  </div>
-                  <div data-filter=".websites" class="cbp-filter-item"> Web Applications <div class="cbp-filter-counter"></div>
-                  </div>
-                </div>
-                <div id="js-grid-juicy-projects" class="cbp">
-                  <div class="cbp-item websites">
-                    <div class="cbp-caption">
-                      <div class="cbp-caption-defaultWrap">
-                        <img src="images/web/small/1-small.jpg" alt="">
-                      </div>
-                      <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                          <div class="cbp-l-caption-body">
-                            <a href="#" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="CRM Application">view details</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cbp-l-grid-projects-title">CRM System</div>
-                    <div class="cbp-l-grid-projects-desc">Laravel / Vue.js</div>
-                  </div>
-                  <div class="cbp-item websites">
-                    <div class="cbp-caption">
-                      <div class="cbp-caption-defaultWrap">
-                        <img src="images/web/small/2-small.jpg" alt="">
-                      </div>
-                      <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                          <div class="cbp-l-caption-body">
-                            <a href="#" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="E-commerce Platform">view details</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cbp-l-grid-projects-title">E-commerce Platform</div>
-                    <div class="cbp-l-grid-projects-desc">PHP / MySQL</div>
-                  </div>
-                  <div class="cbp-item websites">
-                    <div class="cbp-caption">
-                      <div class="cbp-caption-defaultWrap">
-                        <img src="images/web/small/3-small.jpg" alt="">
-                      </div>
-                      <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                          <div class="cbp-l-caption-body">
-                            <a href="#" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Admin Dashboard">view details</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cbp-l-grid-projects-title">SaaS Dashboard</div>
-                    <div class="cbp-l-grid-projects-desc">Laravel / API</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <livewire:portfolio-projects wire:key="portfolio-projects" />
         </div>
       </section>
       <section id="section7">
+        <div class="container">
+          <h2>Client &amp; Team Reviews</h2>
+          <livewire:reviews-list wire:key="reviews-list" />
+        </div>
+      </section>
+      <section id="section8">
         <div class="container">
           <h2>Get In Touch</h2>
           <div class="row">
@@ -697,10 +601,7 @@
                 <a class="social-icon" href="https://twitter.com/ndhaked" target="_blank">
                   <i class="fa fa-twitter"></i>
                 </a>
-                <a class="social-icon" href="https://plus.google.com/u/0/115712836675253430474" target="_blank">
-                  <i class="fa fa-google-plus"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/ndhaked" class="social-icon" target="_blank">
+                <a href="https://www.linkedin.com/in/dhaked/" class="social-icon" target="_blank">
                   <i class="fa fa-linkedin" target="_blank"></i>
                 </a>
                 <a class="social-icon" href="skype:live:718c6b5c940cd730">
@@ -711,55 +612,7 @@
             </div>
             <div class="col-sm-7">
               <h5>Contact Form</h5>
-              <form action="{{ route('contactusSubmit') }}" method="post" class="form-horizontal contact-form">
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Name</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="contact-name" name="contact-name" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="contact-email" name="contact-email" />
-                  </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Phone</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="contact-phone" name="contact_phone" />
-                    </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Message</label>
-                  <div class="col-sm-10">
-                    <textarea name="contact-message" class="contact-message" rows="3"></textarea>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-sm-10 col-sm-offset-2">
-                    <button type="submit" class="button solid-button purple">Send Message</button>
-                  </div>
-                </div>
-                <div class="contact-loading alert alert-info form-alert">
-                  <span class="message">Sending Request...</span>
-                  <button type="button" class="close" data-hide="alert" aria-label="Close">
-                    <i class="fa fa-times"></i>
-                  </button>
-                </div>
-                <div class="contact-success alert alert-success form-alert">
-                  <span class="message">Success!</span>
-                  <button type="button" class="close" data-hide="alert" aria-label="Close">
-                    <i class="fa fa-times"></i>
-                  </button>
-                </div>
-                <div class="contact-error alert alert-danger form-alert">
-                  <span class="message">Error!</span>
-                  <button type="button" class="close" data-hide="alert" aria-label="Close">
-                    <i class="fa fa-times"></i>
-                  </button>
-                </div>
-              </form>
+              <livewire:contact-form wire:key="contact-form-main" />
             </div>
           </div>
           <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.2666209407475!2d75.7324065752899!3d26.83147086357751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db56819373c3b%3A0x5a19d8d201274576!2sSky%20Nation!5e0!3m2!1sen!2sin!4v1770454897446!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -785,10 +638,7 @@
               <a class="social-icon" href="https://twitter.com/ndhaked" target="_blank">
                 <i class="fa fa-twitter"></i>
               </a>
-              <a class="social-icon" href="https://plus.google.com/u/0/115712836675253430474" target="_blank">
-                <i class="fa fa-google-plus"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/ndhaked" class="social-icon" target="_blank">
+              <a href="https://www.linkedin.com/in/dhaked/" class="social-icon" target="_blank">
                 <i class="fa fa-linkedin" target="_blank"></i>
               </a>
               <a class="social-icon" href="skype:live:718c6b5c940cd730">
@@ -811,8 +661,6 @@
         </div>
       </div>
     </div>
-    <div class="bottom">Copyright © Nirbhay Dhaked. All Rights Reserved.</div>
+    <div class="bottom">Copyright &copy; {{ date('Y') }} Nirbhay Dhaked. All Rights Reserved.</div>
   </footer>
-@endsection
-@section('uniquePageScript')
 @endsection

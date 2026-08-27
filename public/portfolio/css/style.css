@@ -912,13 +912,27 @@ input:not([type=submit]):not([type=file]):focus, select:focus, textarea:focus {
 	width: 1600px;
 	height: auto;
 	float: left;
-	padding: 42px 12px;
+	padding: 42px 12px 60px 12px;
 }
 .sections-wrapper > section.no-padding-bottom {
 	padding-bottom: 0;
 }
 .sections-wrapper > section.no-padding-bottom .padding-fix {
 	padding-bottom: 72px;
+}
+#section1 {
+	padding: 42px 12px 60px 12px;
+}
+#section1 .button-row {
+	margin-top: 36px;
+	margin-bottom: 30px;
+}
+#section1 .image {
+	text-align: center;
+}
+#section1 .image img {
+	max-height: 520px;
+	margin: 0 auto;
 }
 .section-img {
 	max-height: 650px;

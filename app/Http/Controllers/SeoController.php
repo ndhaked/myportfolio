@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class SeoController extends Controller
 {
     public function laravelExpertJaipur()
@@ -33,34 +31,34 @@ class SeoController extends Controller
     {
         $pages = [
             [
-                'url'        => url('/'),
-                'lastmod'    => '2026-02-22',
+                'url' => url('/'),
+                'lastmod' => now()->toDateString(),
                 'changefreq' => 'weekly',
-                'priority'   => '1.0',
+                'priority' => '1.0',
             ],
             [
-                'url'        => url('/laravel-expert-in-jaipur'),
-                'lastmod'    => '2026-02-22',
+                'url' => url('/laravel-expert-in-jaipur'),
+                'lastmod' => now()->toDateString(),
                 'changefreq' => 'monthly',
-                'priority'   => '0.9',
+                'priority' => '0.9',
             ],
             [
-                'url'        => url('/hire-laravel-developer-in-jaipur'),
-                'lastmod'    => '2026-02-22',
+                'url' => url('/hire-laravel-developer-in-jaipur'),
+                'lastmod' => now()->toDateString(),
                 'changefreq' => 'monthly',
-                'priority'   => '0.9',
+                'priority' => '0.9',
             ],
             [
-                'url'        => url('/senior-laravel-developer-india'),
-                'lastmod'    => '2026-02-22',
+                'url' => url('/senior-laravel-developer-india'),
+                'lastmod' => now()->toDateString(),
                 'changefreq' => 'monthly',
-                'priority'   => '0.9',
+                'priority' => '0.9',
             ],
             [
-                'url'        => url('/laravel-api-development'),
-                'lastmod'    => '2026-02-22',
+                'url' => url('/laravel-api-development'),
+                'lastmod' => now()->toDateString(),
                 'changefreq' => 'monthly',
-                'priority'   => '0.9',
+                'priority' => '0.9',
             ],
         ];
 

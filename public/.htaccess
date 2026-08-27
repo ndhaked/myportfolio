@@ -5,6 +5,12 @@
 
     RewriteEngine On
 
+    # ----------------------------------------------------------------------
+    # 1. Redirect www to non-www (Specific for laravelexpert.in)
+    # ----------------------------------------------------------------------
+    RewriteCond %{HTTP_HOST} ^www\.laravelexpert\.in [NC]
+    RewriteRule ^(.*)$ https://laravelexpert.in/$1 [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

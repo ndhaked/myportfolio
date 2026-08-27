@@ -24,7 +24,7 @@
       "addressCountry": "IN"
     },
     "sameAs": [
-      "https://www.linkedin.com/in/ndhaked",
+      "https://www.linkedin.com/in/dhaked/",
       "https://twitter.com/ndhaked"
     ]
   },

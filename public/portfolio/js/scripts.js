@@ -181,7 +181,9 @@
 			var vWidth = $(window).width();
 			var vheight = $(window).height();
 			$('.sections-wrapper > section').css('width', vWidth);
-			$('.sections-wrapper').css('width', vWidth * count).css('height', $('.sections-wrapper section.active').outerHeight());
+			var $activeSection = $('.sections-wrapper section.active');
+			var activeHeight = $activeSection.length ? $activeSection.outerHeight(true) : 'auto';
+			$('.sections-wrapper').css('width', vWidth * count).css('height', activeHeight);
 		}
 		function disableButtons(url) {
 			if (url == count) {
@@ -221,14 +223,18 @@
 			$('.sections-wrapper section').removeClass('active');
 			$('.main-nav .active').removeClass('active');
 			$('.responsive-nav .active').removeClass('active');
-			$('#section' + url).addClass('active');
+			var $target = $('#section' + url);
+			$target.addClass('active');
 			$('.main-nav a[href="#section' + url + '"]').parent().addClass('active');
 			$('.responsive-nav a[href="#section' + url + '"]').parent().addClass('active');
-			$('.sections-wrapper').css('height', $('.sections-wrapper section.active').outerHeight());
+			$('.sections-wrapper').css('height', $target.outerHeight(true));
 			disableButtons(url);
 		}
 		horizontalSections();
-		$(window).on('resize', function () {
+		$('.sections-wrapper').imagesLoaded(function () {
+			horizontalSections();
+		});
+		$(window).on('load resize', function () {
 			horizontalSections();
 		});
 		disableButtons(url);
@@ -239,16 +245,14 @@
 				if ($(targetId).length > 0) {
 					// Home page horizontal scroll
 					slide('mainNav', $(this));
-					if (targetId !== '#section7') { // Keep contact sidebar working
-						e.preventDefault();
-						$.smoothScroll({
-							scrollTarget: targetId,
-							offset: 0,
-							direction: 'left',
-							scrollElement: $('div.sections'),
-							speed: 600
-						});
-					}
+					e.preventDefault();
+					$.smoothScroll({
+						scrollTarget: targetId,
+						offset: 0,
+						direction: 'left',
+						scrollElement: $('div.sections'),
+						speed: 600
+					});
 				}
 			}
 
@@ -346,74 +350,8 @@
 		return re.test(email);
 	}
 
-	$('.contact-form').on('submit', function (e) {
-		e.preventDefault(); // Stop normal form submission
-
-		var contactForm = $(this);
-		var submitBtn = contactForm.find('button[type="submit"]');
-
-		// Reset alerts
-		contactForm.find('.contact-error').fadeOut();
-		contactForm.find('.contact-success').fadeOut();
-		contactForm.find('.contact-loading').fadeIn();
-		submitBtn.prop('disabled', true); // Prevent double click
-
-		// Client-side Validation
-		if (validateEmail(contactForm.find('.contact-email').val()) &&
-			contactForm.find('.contact-name').val().length !== 0 &&
-			contactForm.find('.contact-message').val().length !== 0) {
-
-			var action = contactForm.attr('action');
-
-			$.ajax({
-				type: "POST",
-				url: action,
-				// Setup CSRF Token for Laravel
-				headers: {
-					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-				},
-				data: {
-					contact_name: contactForm.find('.contact-name').val(),
-					contact_email: contactForm.find('.contact-email').val(),
-					contact_message: contactForm.find('.contact-message').val(),
-					contact_phone: contactForm.find('.contact-phone').val(),
-				},
-				success: function (response) {
-					contactForm.find('.contact-loading').fadeOut();
-					contactForm.find('.contact-success').find('.message').html(response.message);
-					contactForm.find('.contact-success').fadeIn();
-
-					// Clear inputs on success
-					contactForm.find('input, textarea').val('');
-					submitBtn.prop('disabled', false);
-				},
-				error: function (xhr) {
-					contactForm.find('.contact-loading').fadeOut();
-					var errorMsg = 'Sorry, an error occurred.';
-
-					// If Laravel returns validation errors
-					if (xhr.status === 422) {
-						errorMsg = 'Please check your inputs.';
-					}
-
-					contactForm.find('.contact-error').find('.message').html(errorMsg);
-					contactForm.find('.contact-error').fadeIn();
-					submitBtn.prop('disabled', false);
-				}
-			});
-
-		} else {
-			// Validation Failed
-			contactForm.find('.contact-loading').fadeOut();
-			var msg = 'Please fill out all fields correctly.';
-			if (!validateEmail(contactForm.find('.contact-email').val())) {
-				msg = 'Please enter a valid email.';
-			}
-			contactForm.find('.contact-error').find('.message').html(msg);
-			contactForm.find('.contact-error').fadeIn();
-			submitBtn.prop('disabled', false);
-		}
-	});
+	// Contact form submission is now handled by the Livewire <livewire:contact-form />
+	// component (wire:submit), which replaced this jQuery/AJAX handler.
 	/*==========  Map  ==========*/
 	var map;
 	function initialize_map() {
