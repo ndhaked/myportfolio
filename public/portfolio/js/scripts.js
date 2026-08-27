@@ -378,6 +378,8 @@
 			return false;
 		}
 	}
-	google.maps.event.addDomListener(window, 'load', initialize_map);
+	if (typeof google !== 'undefined' && google.maps) {
+		google.maps.event.addDomListener(window, 'load', initialize_map);
+	}
 
 })(jQuery);
