@@ -121,10 +121,15 @@ new class extends Component
             display: block;
             overflow: hidden;
         }
+        .portfolio-grid-item .cbp-caption-defaultWrap {
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
         .portfolio-grid-item .cbp-caption-defaultWrap img {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
+            object-fit: fill;
         }
         .portfolio-grid-item .cbp-caption-activeWrap {
             position: absolute;

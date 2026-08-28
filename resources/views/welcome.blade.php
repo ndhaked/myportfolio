@@ -37,9 +37,6 @@
             <li>
               <a href="https://www.linkedin.com/in/dhaked/" target="_blank">Linkedin</a>
             </li>
-            <li>
-              <a href="skype:live:718c6b5c940cd730">Skype</a>
-            </li>
           </ul>
         </nav>
       </div>
@@ -71,9 +68,6 @@
           </a>
           <a href="https://www.linkedin.com/in/dhaked/" class="social-icon" target="_blank">
             <i class="fa fa-linkedin" target="_blank"></i>
-          </a>
-          <a class="social-icon" href="skype:live:718c6b5c940cd730">
-            <i class="fa fa-skype"></i>
           </a>
         </div>
       </div>
@@ -107,9 +101,6 @@
             </li>
             <li>
               <a href="https://www.linkedin.com/in/dhaked/" target="_blank">Linkedin</a>
-            </li>
-            <li>
-              <a href="skype:live:718c6b5c940cd730">Skype</a>
             </li>
           </ul>
         </nav>
@@ -194,19 +185,16 @@
               <div class="signature"></div>
               <ul class="list-unstyled text-uppercase">
                 <li>
-                  <b>Date Of Birth:</b> 14 July 1991
-                </li>
-                <li>
                   <b>Phone:</b> +91 8209-99-0511
                 </li>
                 <li>
                   <b>Email:</b> nirbhaydhaked@gmail.com
                 </li>
                 <li>
-                  <b>Address:</b> FN. 201, Sky Nation Project Patrakar Colony, Jaipur, Rajasthan (India)
+                  <b>Location:</b> Jaipur, Rajasthan (India)
                 </li>
                 <li>
-                  <b>Website:</b> http://www.laravelexpert.in
+                  <b>Website:</b> https://laravelexpert.in
                 </li>
               </ul>
               <div class="spacer"></div>
@@ -578,16 +566,13 @@
               <h5>Contact Details</h5>
               <ul class="list-icons list-unstyled">
                 <li>
-                  <i class="ion-ios-location-outline"></i>FN. 201 2nd Floor Sky Nation Project, <br>Patrakar Colony, Jaipur, <br>Rajasthan (India)
+                  <i class="ion-ios-location-outline"></i>Jaipur, Rajasthan (India)
                 </li>
                 <li>
                   <i class="ion-iphone"></i>Phone: +91 8209-99-0511
                 </li>
                 <li>
                   <i class="ion-ios-email-outline"></i>Email: <a href="mailto:nirbhaydhaked@gmail.com">nirbhaydhaked@gmail.com</a>
-                </li>
-                <li>
-                  <i class="ion-social-skype-outline "></i>Skype: <a href="skype:live:718c6b5c940cd730">live:718c6b5c940cd730</a>
                 </li>
                 <li>
                   <i class="ion-ios-home-outline"></i>Website: <a href="https://laravelexpert.in/">laravelexpert.in</a>
@@ -604,9 +589,6 @@
                 <a href="https://www.linkedin.com/in/dhaked/" class="social-icon" target="_blank">
                   <i class="fa fa-linkedin" target="_blank"></i>
                 </a>
-                <a class="social-icon" href="skype:live:718c6b5c940cd730">
-                  <i class="fa fa-skype"></i>
-                </a>
               </div>
               <div class="spacer"></div>
             </div>
@@ -615,7 +597,7 @@
               <livewire:contact-form wire:key="contact-form-main" />
             </div>
           </div>
-          <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.2666209407475!2d75.7324065752899!3d26.83147086357751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db56819373c3b%3A0x5a19d8d201274576!2sSky%20Nation!5e0!3m2!1sen!2sin!4v1770454897446!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114589.5!2d75.7873!3d26.9124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1770454897446!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
       </section>
@@ -627,7 +609,7 @@
         <div class="row">
           <div class="col-sm-4">
             <h4>Address</h4>
-            <p>FN. 201 2nd Floor Sky Nation Project, <br>Patrakar Colony, Jaipur, <br>Rajasthan (India) </p>
+            <p>Jaipur, <br>Rajasthan (India)</p>
           </div>
           <div class="col-sm-4">
             <h4>Connect</h4>
@@ -641,14 +623,11 @@
               <a href="https://www.linkedin.com/in/dhaked/" class="social-icon" target="_blank">
                 <i class="fa fa-linkedin" target="_blank"></i>
               </a>
-              <a class="social-icon" href="skype:live:718c6b5c940cd730">
-                <i class="fa fa-skype"></i>
-              </a>
             </div>
           </div>
           <div class="col-sm-4">
             <h4>Contact</h4>
-            <p>Phone:- +91 8209-99-0511 <br />Email: nirbhaydhaked@gmail.com <br />Skype: live:718c6b5c940cd730 </p>
+            <p>Phone:- +91 8209-99-0511 <br />Email: nirbhaydhaked@gmail.com</p>
           </div>
           <div class="row" style="margin-top: 20px; padding-top: 15px; text-align: center;">
             <div class="col-sm-12">
