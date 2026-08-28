@@ -16,13 +16,15 @@
         <meta property="og:title" content="@yield('title', 'Nirbhay Dhaked – Senior Laravel Developer')" />
         <meta property="og:description" content="@yield('meta_description', 'Senior Laravel Developer with 12+ years experience in SaaS, API development and backend architecture.')" />
         <meta property="og:url" content="@yield('canonical', url('/'))" />
+        <meta property="og:image" content="@yield('og_image', asset('images/mydphome.png'))" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nirbhay Dhaked – Laravel Expert" />
         <meta property="og:locale" content="en_US" />
 
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="@yield('title', 'Nirbhay Dhaked – Senior Laravel Developer')" />
         <meta name="twitter:description" content="@yield('meta_description', 'Senior Laravel Developer with 12+ years experience.')" />
+        <meta name="twitter:image" content="@yield('og_image', asset('images/mydphome.png'))" />
 
         @hasSection('structured_data')
             @yield('structured_data')
@@ -36,7 +38,13 @@
           "description": "Senior Laravel Developer with 12+ years experience in SaaS, APIs and scalable web applications.",
           "founder": {
             "@@type": "Person",
-            "name": "Nirbhay Dhaked"
+            "name": "Nirbhay Dhaked",
+            "jobTitle": "Senior Laravel Developer & Tech Lead",
+            "sameAs": [
+              "https://www.linkedin.com/in/dhaked/",
+              "https://www.facebook.com/dnirbhay",
+              "https://twitter.com/ndhaked"
+            ]
           }
         }
         </script>

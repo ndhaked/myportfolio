@@ -11,11 +11,16 @@ class Portfolio extends Model
     protected $fillable = [
         'title',
         'description',
+        'challenge',
+        'solution',
+        'impact',
         'technologies',
         'category',
         'photo',
         'detail_photo',
         'website_url',
+        'github_url',
+        'demo_url',
     ];
 
     protected $casts = [

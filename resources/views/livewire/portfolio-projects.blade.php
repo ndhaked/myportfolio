@@ -45,7 +45,7 @@ new class extends Component
     }
 }; ?>
 
-<div class="wb-grid" x-data="{ lightboxOpen: false, lightboxSrc: '', lightboxTitle: '' }">
+<div class="wb-grid" x-data="{ lightboxOpen: false, lightboxSrc: '', lightboxTitle: '', lightboxId: null }">
     <div class="wb-center">
         <div class="grid">
             <div class="cbp-l-filters-button">
@@ -74,7 +74,7 @@ new class extends Component
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
                                     <div class="cbp-l-caption-body">
-                                        <a href="#" @click.prevent="lightboxSrc = '{{ $detail }}'; lightboxTitle = '{{ addslashes($project->title ?: 'Untitled Project') }}'; lightboxOpen = true" class="cbp-l-caption-buttonRight">view details</a>
+                                        <a href="#" @click.prevent="lightboxSrc = '{{ $detail }}'; lightboxTitle = '{{ addslashes($project->title ?: 'Untitled Project') }}'; lightboxId = {{ $project->id }}; lightboxOpen = true" class="cbp-l-caption-buttonRight">view details</a>
                                     </div>
                                 </div>
                             </div>
@@ -106,6 +106,32 @@ new class extends Component
         <div class="portfolio-lightbox-inner" @click.stop>
             <img :src="lightboxSrc" :alt="lightboxTitle">
             <p x-text="lightboxTitle"></p>
+
+            @foreach ($this->filteredProjects as $project)
+                @if ($project->challenge || $project->solution || $project->impact || $project->github_url || $project->demo_url)
+                    <div x-show="lightboxId === {{ $project->id }}" class="portfolio-case-study" wire:key="case-study-{{ $project->id }}">
+                        @if ($project->challenge)
+                            <p><strong>Challenge:</strong> {{ $project->challenge }}</p>
+                        @endif
+                        @if ($project->solution)
+                            <p><strong>Solution:</strong> {{ $project->solution }}</p>
+                        @endif
+                        @if ($project->impact)
+                            <p><strong>Impact:</strong> {{ $project->impact }}</p>
+                        @endif
+                        @if ($project->github_url || $project->demo_url)
+                            <p class="portfolio-case-study-links">
+                                @if ($project->github_url)
+                                    <a href="{{ $project->github_url }}" target="_blank" rel="noopener">GitHub Repo</a>
+                                @endif
+                                @if ($project->demo_url)
+                                    <a href="{{ $project->demo_url }}" target="_blank" rel="noopener">Live Demo</a>
+                                @endif
+                            </p>
+                        @endif
+                    </div>
+                @endif
+            @endforeach
         </div>
     </div>
 
@@ -174,6 +200,23 @@ new class extends Component
             color: #fff;
             margin-top: 14px;
             font-size: 15px;
+        }
+        .portfolio-case-study {
+            text-align: left;
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .portfolio-case-study p {
+            margin-top: 8px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .portfolio-case-study-links a {
+            display: inline-block;
+            margin-right: 16px;
+            color: #b388ff;
+            text-decoration: underline;
         }
         .portfolio-lightbox-close {
             position: fixed;

@@ -14,6 +14,9 @@ new class extends Component
     public ?int $editingId = null;
     public ?string $title = null;
     public ?string $description = null;
+    public ?string $challenge = null;
+    public ?string $solution = null;
+    public ?string $impact = null;
     public string $technologiesInput = '';
     public ?string $category = null;
     public $photo = null;
@@ -21,6 +24,8 @@ new class extends Component
     public $detailPhoto = null;
     public ?string $existingDetailPhoto = null;
     public ?string $website_url = null;
+    public ?string $github_url = null;
+    public ?string $demo_url = null;
 
     public bool $showForm = false;
 
@@ -51,11 +56,16 @@ new class extends Component
         return [
             'title' => 'nullable|string|max:255',
             'description' => 'nullable|string',
+            'challenge' => 'nullable|string',
+            'solution' => 'nullable|string',
+            'impact' => 'nullable|string',
             'technologiesInput' => 'nullable|string',
             'category' => 'nullable|in:'.implode(',', Portfolio::CATEGORIES),
             'photo' => 'nullable|image|max:2048',
             'detailPhoto' => 'nullable|image|max:2048',
             'website_url' => 'nullable|url|max:255',
+            'github_url' => 'nullable|url|max:255',
+            'demo_url' => 'nullable|url|max:255',
         ];
     }
 
@@ -76,11 +86,16 @@ new class extends Component
         $this->editingId = $portfolio->id;
         $this->title = $portfolio->title;
         $this->description = $portfolio->description;
+        $this->challenge = $portfolio->challenge;
+        $this->solution = $portfolio->solution;
+        $this->impact = $portfolio->impact;
         $this->technologiesInput = implode(', ', $portfolio->technologies ?? []);
         $this->category = $portfolio->category;
         $this->existingPhoto = $portfolio->photo;
         $this->existingDetailPhoto = $portfolio->detail_photo;
         $this->website_url = $portfolio->website_url;
+        $this->github_url = $portfolio->github_url;
+        $this->demo_url = $portfolio->demo_url;
         $this->photo = null;
         $this->detailPhoto = null;
         $this->showForm = true;
@@ -99,9 +114,14 @@ new class extends Component
         $data = [
             'title' => $validated['title'],
             'description' => $validated['description'],
+            'challenge' => $validated['challenge'],
+            'solution' => $validated['solution'],
+            'impact' => $validated['impact'],
             'technologies' => $technologies,
             'category' => $validated['category'],
             'website_url' => $validated['website_url'],
+            'github_url' => $validated['github_url'],
+            'demo_url' => $validated['demo_url'],
         ];
 
         if ($this->photo) {
@@ -139,7 +159,7 @@ new class extends Component
 
     protected function resetForm(): void
     {
-        $this->reset(['editingId', 'title', 'description', 'technologiesInput', 'category', 'photo', 'existingPhoto', 'detailPhoto', 'existingDetailPhoto', 'website_url']);
+        $this->reset(['editingId', 'title', 'description', 'challenge', 'solution', 'impact', 'technologiesInput', 'category', 'photo', 'existingPhoto', 'detailPhoto', 'existingDetailPhoto', 'website_url', 'github_url', 'demo_url']);
         $this->resetErrorBag();
     }
 }; ?>
@@ -188,10 +208,44 @@ new class extends Component
                         @error('technologiesInput') <p class="mt-1 text-sm text-red-600">{{ $message }}</p> @enderror
                     </div>
 
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Website URL</label>
-                        <input type="text" wire:model="website_url" placeholder="https://example.com" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                        @error('website_url') <p class="mt-1 text-sm text-red-600">{{ $message }}</p> @enderror
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Case Study <span class="text-gray-400 font-normal normal-case">(optional — shown in project details if filled in)</span></p>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Challenge</label>
+                                <textarea wire:model="challenge" rows="2" placeholder="What business/technical problem did this project solve?" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                                @error('challenge') <p class="mt-1 text-sm text-red-600">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Solution</label>
+                                <textarea wire:model="solution" rows="2" placeholder="What did you build/change to solve it?" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                                @error('solution') <p class="mt-1 text-sm text-red-600">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Impact <span class="text-gray-400 font-normal">(only real, verifiable results)</span></label>
+                                <textarea wire:model="impact" rows="2" placeholder="e.g. actual measured result, if you have one" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                                @error('impact') <p class="mt-1 text-sm text-red-600">{{ $message }}</p> @enderror
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-4 space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Website URL</label>
+                            <input type="text" wire:model="website_url" placeholder="https://example.com" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                            @error('website_url') <p class="mt-1 text-sm text-red-600">{{ $message }}</p> @enderror
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">GitHub URL</label>
+                            <input type="text" wire:model="github_url" placeholder="https://github.com/you/repo" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                            @error('github_url') <p class="mt-1 text-sm text-red-600">{{ $message }}</p> @enderror
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Live Demo URL</label>
+                            <input type="text" wire:model="demo_url" placeholder="https://demo.example.com" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                            @error('demo_url') <p class="mt-1 text-sm text-red-600">{{ $message }}</p> @enderror
+                        </div>
                     </div>
 
                     <div>

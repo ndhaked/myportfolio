@@ -258,6 +258,59 @@ h3.small-margin-bottom {
 	background: #232323;
 	color: #fff;
 }
+.solid-button.green {
+	background: #25d366;
+	color: #fff;
+}
+.button-row .solid-button {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+.hero-heading {
+	line-height: 1.25;
+	word-break: break-word;
+}
+.hero-heading-accent {
+	font-size: 0.6em;
+	font-weight: 400;
+	vertical-align: baseline;
+	display: inline-block;
+}
+@media all and (max-width: 1024px) {
+	.hero-heading {
+		font-size: 40px;
+		line-height: 1.3;
+	}
+}
+@media all and (max-width: 768px) {
+	.hero-heading {
+		font-size: 32px;
+		line-height: 1.3;
+	}
+}
+@media all and (max-width: 480px) {
+	.hero-heading {
+		font-size: 26px;
+		line-height: 1.35;
+	}
+}
+.hero-trust-badges {
+	margin-top: 18px;
+}
+.hero-trust-badges li {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #232323;
+	background: #f2f2f2;
+	border-radius: 20px;
+	padding: 6px 16px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+}
 .solid-button.white-purple {
 	background: #fff;
 	color: #232323;

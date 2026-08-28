@@ -1,4 +1,7 @@
 @extends('layouts.portfolio')
+@section('title', 'Nirbhay Dhaked – Senior Laravel Developer & PHP Architect in Jaipur')
+@section('meta_description', 'Hire Nirbhay Dhaked, a Senior Laravel Developer & PHP Architect in Jaipur with 12+ years of experience building scalable SaaS platforms, REST APIs, and enterprise Laravel applications.')
+@section('canonical', url('/'))
 @section('content')
 <div class="search-overlay"></div>
   <div class="search">
@@ -158,12 +161,16 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-7 vertical-center">
-              <h1>Senior PHP Architect <sup>&</sup> Laravel <sup>Expert</sup>
-              </h1>
+              <h1 class="hero-heading">Senior PHP Architect <span class="hero-heading-accent">&amp;</span> Laravel <span class="hero-heading-accent">Expert</span></h1>
               <p>I am a dedicated <strong>Senior Technology Lead & Laravel Expert</strong> with 12+ years of extensive experience. I don't just write code; I engineer robust, scalable web applications that drive business growth. From complex API ecosystems to high-traffic database architectures, my expertise lies in transforming raw requirements into efficient, secure, and maintainable software. Proficient in Agile methodologies and MySQL optimization, I help innovative companies build the future of their IT infrastructure. </p>
               <p class="button-row">
                 <a href="{{ asset('Nirbhay Singh SR. Laravel Developer.pdf') }}" download class="button solid-button purple">Download CV</a>
+                <a href="https://wa.me/918209990511?text={{ urlencode('Hi Nirbhay, I found your portfolio and would like to discuss a project.') }}" target="_blank" rel="noopener" class="button solid-button green">Book a Call on WhatsApp</a>
               </p>
+              <ul class="hero-trust-badges list-unstyled">
+                <li>12+ Years Experience</li>
+                <li>Senior Laravel &amp; PHP Architect</li>
+              </ul>
             </div>
             <div class="col-sm-5 vertical-center">
                 <div class="image"><img src="{{ asset('images/mydphome.png') }}" alt="Nirbhay Dhaked" class="img-responsive"></div>
@@ -180,8 +187,8 @@
       </div>
             <div class="col-sm-9">
               <h3 class="small-margin-bottom">Nirbhay Dhaked</h3>
-              <h5>Senior Technology Lead (Backend)</h5>
-              <p>With over a decade of hands-on experience in the software industry, I specialize in building custom web applications that are as powerful as they are user-friendly. Currently serving as a <strong>Senior Laravel Developer & Technology Lead</strong>, my technical foundation is built on deep MySQL knowledge, API development, and system architecture, ensuring that every project I touch is optimized for performance and scalability. </p>
+              <h5>Senior Laravel Developer &amp; Tech Lead</h5>
+              <p>With 12+ years of hands-on experience, I build custom web applications that are as powerful as they are user-friendly. My technical foundation spans deep MySQL knowledge, API development, and system architecture — so every project I touch is optimized for performance, security, and long-term scalability from day one.</p>
               <div class="signature"></div>
               <ul class="list-unstyled text-uppercase">
                 <li>
@@ -247,6 +254,12 @@
                   <span>95%</span>
                 </div>
               </div>
+              <label class="progress-bar-label">Livewire / Alpine.js</label>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <span>90%</span>
+                </div>
+              </div>
               <label class="progress-bar-label">Vibe Coding (AI-Assisted Development)</label>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
@@ -277,10 +290,16 @@
                   <span>85%</span>
                 </div>
               </div>
-              <label class="progress-bar-label">HTML5 / CSS3</label>
+              <label class="progress-bar-label">HTML5 / CSS3 / Tailwind CSS</label>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   <span>80%</span>
+                </div>
+              </div>
+              <label class="progress-bar-label">Vue.js</label>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <span>75%</span>
                 </div>
               </div>
               <label class="progress-bar-label">Server Management (Linux)</label>
@@ -309,6 +328,9 @@
                   <ul class="list-icons purple bold-list">
                     <li>
                       <i class="md-arrow-forward"></i>Laravel (All Versions)
+                    </li>
+                    <li>
+                      <i class="md-arrow-forward"></i>Livewire &amp; Real-time UI
                     </li>
                     <li>
                       <i class="md-arrow-forward"></i>System Architecture
@@ -389,7 +411,7 @@
               </div>
               <div class="content">
                 <h5>Senior Laravel Developer & Tech Lead</h5>
-                <p>Building scalable application architectures including modular structures, service layers, repositories, and queues. Responsible for designing and implementing RESTful APIs, authentication systems, and secure data flows. Optimizing application performance using query optimization, Redis caching, and load balancing techniques while ensuring system reliability and high availability in production.</p>
+                <p>Architecting scalable Laravel applications with modular structures, service layers, repositories, and queues. Designing secure RESTful APIs and authentication systems, and optimizing performance through query tuning, Redis caching, and load balancing — while maintaining high availability in production.</p>
               </div>
               <div class="icon">
                 <i class="ion-code"></i>
@@ -403,7 +425,7 @@
               </div>
               <div class="content">
                 <h5>Software Engineer (Laravel Module Lead)</h5>
-                <p>Led and managed the development of robust web applications using Laravel. Oversaw the architecture and deployment of modules, ensuring high performance and maintainability. Mentored a team of developers, conducted code reviews, and collaborated with stakeholders to deliver solutions that met critical business requirements. Focused on scalable architectures and automated testing.</p>
+                <p>Led development of business-critical Laravel modules end-to-end — architecture, deployment, and long-term maintainability. Mentored a team of developers, drove code review standards, and partnered directly with stakeholders to ship solutions aligned with critical business requirements, backed by scalable architecture and automated testing.</p>
               </div>
               <div class="icon">
                 <i class="ion-laptop"></i>
@@ -417,7 +439,7 @@
               </div>
               <div class="content">
                 <h5>Sr. Laravel Developer & Tech Lead</h5>
-                <p>Served for 7 years, progressing from Senior Developer to Tech Lead. Specialized in API Development and complex Laravel frameworks. Led backend teams in delivering high-quality web solutions, optimizing database performance, and implementing advanced security protocols for international clients.</p>
+                <p>Grew from Senior Developer to Tech Lead over 7 years, specializing in complex Laravel architectures and API development. Led backend teams delivering high-quality solutions for international clients, with a focus on database performance optimization and advanced security protocols.</p>
               </div>
               <div class="icon">
                 <i class="ion-trophy"></i>
@@ -431,7 +453,7 @@
               </div>
               <div class="content">
                 <h5>Senior Software Engineer</h5>
-                <p>Worked as a key member of the engineering team, developing efficient and affordable software solutions. Gained significant experience in handling full lifecycle software development projects and client communication.</p>
+                <p>Delivered efficient, cost-effective software solutions as a core engineering team member, managing full-cycle development from requirements through deployment while maintaining direct client communication.</p>
               </div>
               <div class="icon">
                 <i class="ion-easel"></i>
@@ -445,7 +467,7 @@
               </div>
               <div class="content">
                 <h5>PHP Developer</h5>
-                <p>Joined as a Senior Developer focusing on the Laravel framework. Responsible for coding core modules and transitioning legacy PHP applications to modern MVC architecture.</p>
+                <p>Brought in as a senior contributor to lead Laravel development on core modules, and to modernize legacy PHP applications into clean MVC architecture.</p>
               </div>
               <div class="icon">
                 <i class="ion-code-working"></i>
@@ -459,7 +481,7 @@
               </div>
               <div class="content">
                 <h5>Web Programmer and Developer</h5>
-                <p>Developed various industrial management software and dynamic websites. Built a strong foundation in core PHP, database management, and web application logic.</p>
+                <p>Built industrial management software and dynamic websites from the ground up, establishing a strong foundation in core PHP, database design, and application logic.</p>
               </div>
               <div class="icon">
                 <i class="ion-monitor"></i>
