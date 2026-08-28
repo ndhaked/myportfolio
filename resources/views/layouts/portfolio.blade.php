@@ -56,7 +56,7 @@
         <link href="{{ asset('portfolio/fonts/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
         <link href="{{ asset('portfolio/css/owl.carousel.css') }}" rel="stylesheet">
         <link href="{{ asset('portfolio/css/owl.theme.default.css') }}" rel="stylesheet">
-        <link href="{{ asset('portfolio/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('portfolio/css/style.css') }}?v={{ filemtime(public_path('portfolio/css/style.css')) }}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ asset('portfolio/css/cubeportfolio.min.css') }}">
         <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
@@ -73,7 +73,7 @@
         <script src="{{ asset('portfolio/js/owl.carousel.min.js') }}"></script>
         <script src="{{ asset('portfolio/js/isotope.pkgd.min.js') }}"></script>
         <script src="{{ asset('portfolio/js/imagesloaded.pkgd.min.js') }}"></script>
-        <script src="{{ asset('portfolio/js/scripts.js') }}"></script>
+        <script src="{{ asset('portfolio/js/scripts.js') }}?v={{ filemtime(public_path('portfolio/js/scripts.js')) }}"></script>
         <script type="text/javascript" src="{{ asset('portfolio/js/jquery-latest.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('portfolio/js/jquery.cubeportfolio.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('portfolio/js/main.js') }}"></script>
