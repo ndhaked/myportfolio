@@ -291,7 +291,7 @@ h3.small-margin-bottom {
 }
 @media all and (max-width: 480px) {
 	.hero-heading {
-		font-size: 26px;
+		font-size: 23px;
 		line-height: 1.35;
 	}
 }
