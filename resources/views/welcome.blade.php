@@ -146,6 +146,9 @@
           <li>
             <a href="#section8">Contact</a>
           </li>
+          <li>
+            <a href="{{ route('skill-test.index') }}">Skill Test</a>
+          </li>
         </ul>
       </nav>
     </div>

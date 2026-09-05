@@ -14,5 +14,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(RoleAndAdminSeeder::class);
+        $this->call(QuizLevelSeeder::class);
+        $this->call(QuizTechnologySeeder::class);
+        $this->call(QuizQuestionSeeder::class);
+        $this->call(MySqlQuestionSeeder::class);
+        $this->call(NodeJsQuestionSeeder::class);
+        $this->call(AngularQuestionSeeder::class);
+        $this->call(DevOpsQuestionSeeder::class);
     }
 }

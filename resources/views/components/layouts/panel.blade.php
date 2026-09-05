@@ -40,6 +40,24 @@
                         <x-slot name="icon"><x-icon name="chart" class="w-5 h-5" /></x-slot>
                         Reviews
                     </x-panel.nav-link>
+
+                    <p class="px-3 pt-5 pb-1.5 text-xs font-semibold uppercase tracking-wider text-gray-400">Skill Test</p>
+                    <x-panel.nav-link :href="route('admin.skill-test.attempts.index')" :active="request()->routeIs('admin.skill-test.attempts.*')">
+                        <x-slot name="icon"><x-icon name="clipboard" class="w-5 h-5" /></x-slot>
+                        Attempts
+                    </x-panel.nav-link>
+                    <x-panel.nav-link :href="route('admin.skill-test.questions.index')" :active="request()->routeIs('admin.skill-test.questions.*')">
+                        <x-slot name="icon"><x-icon name="book" class="w-5 h-5" /></x-slot>
+                        Question Bank
+                    </x-panel.nav-link>
+                    <x-panel.nav-link :href="route('admin.skill-test.technologies.index')" :active="request()->routeIs('admin.skill-test.technologies.*')">
+                        <x-slot name="icon"><x-icon name="academic-cap" class="w-5 h-5" /></x-slot>
+                        Technologies
+                    </x-panel.nav-link>
+                    <x-panel.nav-link :href="route('admin.skill-test.levels.index')" :active="request()->routeIs('admin.skill-test.levels.*')">
+                        <x-slot name="icon"><x-icon name="calendar" class="w-5 h-5" /></x-slot>
+                        Levels
+                    </x-panel.nav-link>
                 </nav>
             </aside>
 
